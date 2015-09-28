@@ -9,6 +9,25 @@ module.exports = {
     scripts: [{ elem: 'js', url: '_ergo.js' }],
 	mods: { theme: 'ergo'},
     content: [
+	   {
+			block: 'sticky',
+			mix: [ { js: true }, { block: 'filter', js: true }, { block: 'shadow', mods: { 4: true } }],
+			content: [
+				{
+					block: 'radio-group',
+					mix: [{ block: 'filter', elem: 'group' }],
+					mods: { theme : 'baby', size : 'm', type : 'button' },
+					name: 'radio',
+					val: '',
+					options: [
+						{ val: '', text : 'Все' },
+						{ val: 2, text : 'Original' },
+						{ val: 3, text : 'Performance' },
+						{ val: 4, text : 'Four Position 360' }
+					]
+				}
+			]
+	   },	
        {
            block: 'content',
            content: [

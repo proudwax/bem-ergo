@@ -1,0 +1,8 @@
+block('sticky').wrap()(function() {
+    return [
+        this.ctx, // вернет текущий блок
+        {
+			block: 'sticky_backing'
+		} // добавит пустой div
+    ];
+});
