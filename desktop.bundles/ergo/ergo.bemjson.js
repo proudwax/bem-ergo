@@ -4,9 +4,9 @@ module.exports = {
     head: [
         { elem : 'meta', attrs : { name : 'description', content : '' } },
         { elem : 'meta', attrs : { name : 'viewport', content : 'width=device-width, initial-scale=1' } },
-        { elem: 'css', url: '_ergo.css' }
+        { elem: 'css', url: 'ergo.css' }
     ],
-    scripts: [{ elem: 'js', url: '_ergo.js' }],
+    scripts: [{ elem: 'js', url: 'ergo.js' }],
 	mods: { theme: 'ergo'},
     content: [
 	   {
@@ -16,7 +16,7 @@ module.exports = {
 				{
 					block: 'radio-group',
 					mix: [{ block: 'filter', elem: 'group' }],
-					mods: { theme : 'baby', size : 'm', type : 'button' },
+					mods: { theme : 'ergo', size : 'm', type : 'button' },
 					name: 'radio',
 					val: '',
 					options: [
