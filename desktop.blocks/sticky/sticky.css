@@ -1,12 +1,3 @@
-.sticky_fixed_on{
+.sticky{
 	position: fixed;
-}
-.sticky_fixed_off{
-	position: relative;
-}
-.sticky_backing{
-	display: none;
-}
-.sticky_fixed_on + .sticky_backing{
-	display: block;
 }

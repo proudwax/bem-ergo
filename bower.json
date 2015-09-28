@@ -9,6 +9,9 @@
     "libs"
   ],
   "dependencies": {
-    "bem-components": "2.3.0"
+    "bem-components": "2.3.0",
+    "modernizr": "~3.0.0",
+    "flexboxgrid": "~6.3.0",
+    "fontawesome": "~4.4.0"
   }
 }

@@ -1,32 +1,18 @@
-modules.define('filter', ['i-bem__dom', 'jquery'], function(provide, BEMDOM, $) {
+modules.define('filter', ['i-bem__dom', 'events__channels', 'radio-group'], function(provide, BEMDOM, channels, Group) {
 
 provide(BEMDOM.decl(this.name, {
 	onSetMod : {
 		'js': {
             'inited': function() {
-				var filter_value, goods;
+				var filter_value, goods; // это бессмысленно, переменные ограничены областью видимости функции, см. замыкания в JS
+
+                Group.on(this.domElem, 'change', function(e) {
+                    channels('filter').emit('change', e.target.getVal());
+                });
             }
         }
-	},
-	_onClick: function() {
-		goods = this.findBlockOutside('page').findBlocksInside('goods-list__item');
-		$(goods).each(function(){
-			if(this.params.filter != filter_value && filter_value != ''){
-				this.setMod('display', 'none');
-			}else{
-				this.delMod('display');
-			}
-		});
-
 	}
-},
-{
-	live: function() {
-        this.liveBindTo('click', function(e) {
-			filter_value = this.findBlockInside('radio-group').getVal();
-            this._onClick();
-        });
-    }
-}));
+}
+));
 
 });

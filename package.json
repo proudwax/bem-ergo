@@ -25,7 +25,7 @@
   "scripts": {
     "start": "enb server",
     "postinstall": "npm run deps",
-    "deps": "bower i"
+    "deps": "bower i && cd libs/modernizr/ && npm i && ./bin/modernizr -c lib/config-all.json -u -d ./modernizr.min.js"
   },
   "private": true
 }
