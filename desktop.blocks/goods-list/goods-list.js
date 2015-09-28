@@ -14,7 +14,7 @@ provide(BEMDOM.decl(this.name, {
 	_inited: function(){
 		width__action = this.findBlockInside('goods__action').domElem[0].offsetWidth;
 		
-			if(width__action > 155){
+			if(width__action > 165){
 				this.setMod('show', 'text');
 			}else{
 				this.setMod('show', 'icon');
