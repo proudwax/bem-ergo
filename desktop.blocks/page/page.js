@@ -1,6 +1,25 @@
 /* global modules:false */
 
-modules.define('modernizr', function() {
- /* borschik:include:../../libs/modernizr/modernizr.min.js */
- /* borschik:include:../../libs/flexboxgrid//vendor/js/modernizr.flexbox.js */
+modules.define('modernizr', function(provide) {
+ /* borschik:include:../../libs/modernizr/modernizr.js */;
+	provide(Modernizr);
 });
+
+/* modules.define('page', ['i-bem__dom', 'modernizr'], function(provide, BEMDOM, modernizr) {
+
+provide(BEMDOM.decl(this.name, {
+	onSetMod : {
+		'js': {
+            'inited': function() {
+				alert('re');
+				if (Modernizr.awesomeNewFeature) {
+					showOffAwesomeNewFeature();
+				} else {
+					getTheOldLameExperience();
+				}				
+            }
+        }
+	}
+}));
+
+}); */

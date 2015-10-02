@@ -6,7 +6,7 @@ module.exports = {
         { elem : 'meta', attrs : { name : 'viewport', content : 'width=device-width, initial-scale=1' } },
         { elem: 'css', url: 'ergo.css' }
     ],
-    scripts: [{ elem: 'js', url: 'ergo.js' }],
+    scripts: [{ elem: 'js', url: 'ergo.min.js' }],
 	mods: { theme: 'ergo'},
     content: [
 	   {
