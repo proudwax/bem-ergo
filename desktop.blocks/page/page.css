@@ -1,0 +1,5 @@
+@import url("../../libs/flexboxgrid/dist/flexboxgrid.min.css");
+@import url("../../libs/fontawesome/css/font-awesome.min.css");
+.page{
+    padding-top: 44px;
+}

@@ -10,7 +10,12 @@
     "node": ">=0.10"
   },
   "dependencies": {
+<<<<<<< HEAD
     "bower": "^1.4.1"
+=======
+    "bower": "^1.4.1",
+    "lodash": "^3.10.1"
+>>>>>>> 73e42505f0a72204b44b0d16bb5dcde0ea42ad46
   },
   "devDependencies": {
     "bem": "^0.10.0",
@@ -20,12 +25,22 @@
     "enb-bemxjst": "^2.0.0",
     "enb-borschik": "^2.0.0",
     "enb-js": "^1.0.0",
+<<<<<<< HEAD
     "enb-stylus": "^2.0.0"
+=======
+    "enb-stylus": "^2.0.0",
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.11.3"
+>>>>>>> 73e42505f0a72204b44b0d16bb5dcde0ea42ad46
   },
   "scripts": {
     "start": "enb server",
     "postinstall": "npm run deps",
+<<<<<<< HEAD
     "deps": "bower i"
+=======
+    "deps": "bower i && cd libs/modernizr/ && npm i && ./bin/modernizr -c lib/config-all.json -u -d ./modernizr.min.js"
+>>>>>>> 73e42505f0a72204b44b0d16bb5dcde0ea42ad46
   },
   "private": true
 }
