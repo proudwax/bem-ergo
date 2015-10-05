@@ -11,8 +11,14 @@ module.exports = {
 	mods: { theme: 'ergo'},
     content: [
 		{
+			block : 'image',
+			url : 'https://yandex.ru/images/today?size=1920x1920',
+			title : 'Все подробности на bem.info',
+			width : '100%'
+		},
+		{
 			block: 'sticky',
-			mix: [ { js: true }, { block: 'filter', js: true }, { block: 'shadow', mods: { 4: true } }],
+			mix: [{ block: 'filter', js: true }, { block: 'shadow', mods: { 4: true } }],
 			content: [
 				{
 					block: 'radio-group',
@@ -566,6 +572,12 @@ module.exports = {
 					]
 				}
 			]
-		}
+		},
+		{
+			block : 'image',
+			url : 'https://yandex.ru/images/today?size=1920x1920',
+			title : 'Все подробности на bem.info',
+			width : '100%'
+		}		
     ]
 };

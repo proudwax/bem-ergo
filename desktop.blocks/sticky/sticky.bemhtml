@@ -1,0 +1,20 @@
+block('sticky')(
+	wrap()(function(){
+		return [
+			{
+				block: 'sticky',
+				js: true,
+				content: [
+					{
+						elem: 'panel',
+						mix: this.ctx.mix,
+						content: this.ctx.content, // вернет текущий блок
+					},
+					{
+						elem: 'backing'
+					} // добавит пустой div				
+				]
+			}
+		];
+	})
+);
