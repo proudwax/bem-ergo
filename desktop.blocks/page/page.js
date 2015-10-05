@@ -5,21 +5,18 @@ modules.define('modernizr', function(provide) {
 	provide(Modernizr);
 });
 
-/* modules.define('page', ['i-bem__dom', 'modernizr'], function(provide, BEMDOM, modernizr) {
+modules.define('page', ['i-bem__dom', 'modernizr'], function(provide, BEMDOM, modernizr) {
 
 provide(BEMDOM.decl(this.name, {
 	onSetMod : {
 		'js': {
             'inited': function() {
-				alert('re');
-				if (Modernizr.awesomeNewFeature) {
-					showOffAwesomeNewFeature();
-				} else {
-					getTheOldLameExperience();
-				}				
+				/* console.log(Modernizr); */
             }
         }
 	}
 }));
 
-}); */
+});
+
+
