@@ -1,4 +1,5 @@
-block('sticky')(
+// Мой вариант
+/* block('sticky')(
 	wrap()(function(){
 		return [
 			{
@@ -17,4 +18,30 @@ block('sticky')(
 			}
 		];
 	})
-);
+); */
+
+
+// Vladimir Grinenko, доработка под меня
+// bemjson
+
+/* {
+    block: 'sticky',
+    panelMixes: [] // здесь перечислить миксы
+}
+ */
+ 
+// bemhtml
+
+block('sticky')(
+	js()(true),
+	content()(function() {
+		return [
+			{
+				elem: 'panel',
+				mix: this.ctx.panelMix,
+				content: applyNext() // это означает вернуть результат текущей моды (в данном случае — content == более правильный способ сделать this.ctx.content, т.к. применятся и предыдущие шаблоны, если они есть)
+			},
+			{ elem: 'backing' }
+		];
+	})
+)

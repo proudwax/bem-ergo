@@ -4,34 +4,27 @@ provide(BEMDOM.decl(this.name, {
 	onSetMod : {
 		'js': {
             'inited': function() {
-				this.elem('backing').css('height', this.domElem[0].offsetHeight);
+				this.elem('backing').css('height', this.domElem[0].offsetHeight); 	// высота backing элемента 
 				sticky_top = this.domElem[0].offsetTop != 0 ? this.domElem[0].offsetTop : this.elem('backing').domElem[0].offsetTop;
 				
 				this.setMod('fixed', BEMDOM.win.scrollTop() >= sticky_top);	
 				
-				
 				this._scrollWin();
-				/* this._toggleMod(this._inited(backing));
-				this._scrollWin();
-				this._resizeWin(backing); */
+				this._resizeWin();
             }
         }
 	},
 	_scrollWin: function() {
 		this.bindToWin('scroll', function(e) {
-			this._toggleMod();
+			this.setMod('fixed', BEMDOM.win.scrollTop() >= sticky_top)	
 		});		
 	},
-	/* _resizeWin: function(backing) {
+	_resizeWin: function(backing) {
 		this.bindToWin('resize', function(e) {
-			this._inited(backing);
-			this._toggleMod();
-		});
-	}, */
-	_toggleMod: function(){
-		var _scroll = $(window).scrollTop();
+			sticky_top = this.domElem[0].offsetTop != 0 ? this.domElem[0].offsetTop : this.elem('backing').domElem[0].offsetTop;
 		
-		this.setMod('fixed', _scroll >= sticky_top)	
+			this.setMod('fixed', BEMDOM.win.scrollTop() >= sticky_top)
+		});
 	}
 }));
 

@@ -12,13 +12,13 @@ module.exports = {
     content: [
 		{
 			block : 'image',
-			url : 'https://yandex.ru/images/today?size=1920x1920',
+			url : 'https://yandex.ru/images/today?size=1920x600',
 			title : 'Все подробности на bem.info',
 			width : '100%'
 		},
 		{
 			block: 'sticky',
-			mix: [{ block: 'filter', js: true }, { block: 'shadow', mods: { 4: true } }],
+			panelMix: [{ block: 'filter', js: true }, { block: 'shadow', mods: { 4: true } }],
 			content: [
 				{
 					block: 'radio-group',
@@ -67,7 +67,7 @@ module.exports = {
 														{
 															block : 'image',
 															mix: [{ block: 'lazy', js: true }],
-															url: 'i/promo4.png',
+															url: 'https://yandex.ru/images/today?size=600x600',
 															alt: ''												
 														}
 													]
@@ -142,7 +142,7 @@ module.exports = {
 													content: [
 														{
 															tag: 'img',
-															attrs: { src: 'i/promo2.png', alt: '' }										
+															attrs: { src: 'https://yandex.ru/images/today?size=600x600', alt: '' }										
 														}
 													]
 												},
@@ -216,7 +216,7 @@ module.exports = {
 													content: [
 														{
 															tag: 'img',
-															attrs: { src: 'i/promo3.png', alt: '' }										
+															attrs: { src: 'https://yandex.ru/images/today?size=600x600', alt: '' }										
 														}
 													]
 												},
@@ -290,7 +290,7 @@ module.exports = {
 													content: [
 														{
 															tag: 'img',
-															attrs: { src: 'i/promo1.png', alt: '' }										
+															attrs: { src: 'https://yandex.ru/images/today?size=600x600', alt: '' }										
 														}
 													]
 												},
@@ -364,7 +364,7 @@ module.exports = {
 													content: [
 														{
 															tag: 'img',
-															attrs: { src: 'i/promo5.png', alt: '' }										
+															attrs: { src: 'https://yandex.ru/images/today?size=600x600', alt: '' }										
 														}
 													]
 												},
@@ -438,7 +438,7 @@ module.exports = {
 													content: [
 														{
 															tag: 'img',
-															attrs: { src: 'i/promo6.png', alt: '' }										
+															attrs: { src: 'https://yandex.ru/images/today?size=600x600', alt: '' }										
 														}
 													]
 												},
@@ -512,7 +512,7 @@ module.exports = {
 													content: [
 														{
 															tag: 'img',
-															attrs: { src: 'i/promo7.png', alt: '' }										
+															attrs: { src: 'https://yandex.ru/images/today?size=600x600', alt: '' }										
 														}
 													]
 												},
@@ -575,7 +575,7 @@ module.exports = {
 		},
 		{
 			block : 'image',
-			url : 'https://yandex.ru/images/today?size=1920x1920',
+			url : 'https://yandex.ru/images/today?size=1920x800',
 			title : 'Все подробности на bem.info',
 			width : '100%'
 		}		
