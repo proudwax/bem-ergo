@@ -1,0 +1,38 @@
+block('swiper')(
+	cls()('swiper-container')
+	/* elemMatch('slide').wrap()(function(){
+		return [
+			{
+				block: 'swiper-wrapper',
+				content: this.ctx.content
+			}
+		];
+	}), */
+	/* elem('button').mod('prev', true).cls()('swiper-button-prev'),
+	elem('button').mod('next', true).cls()('swiper-button-next'),
+	elem('button').mod('pagination', true).cls()('swiper-pagination') */
+	
+	/* content()(function(){
+		return [
+			{
+				block: 'swiper-wrapper',
+				content: applyNext()
+			},
+			{
+				elem: 'button',
+				mod: { prev: true },
+				cls: 'swiper-button-prev'
+			},
+			{
+				elem: 'button',
+				mod: { next: true },
+				cls: 'swiper-button-next'
+			},
+			{
+				elem: 'button',
+				mod: { pagination: true },
+				cls: 'swiper-pagination'
+			}			
+		]
+	}) */
+);

@@ -1,6 +1,6 @@
 module.exports = {
     block: 'page',
-	/* mix: [{ js: true }], */
+	mix: [{ js: true }],
     title: 'ergo',
     head: [
         { elem : 'meta', attrs : { name : 'description', content : '' } },
@@ -11,11 +11,79 @@ module.exports = {
 	mods: { theme: 'ergo'},
     content: [
 		{
-			block : 'image',
-			url : 'https://yandex.ru/images/today?size=1920x600',
-			title : 'Все подробности на bem.info',
-			width : '100%'
+			block: 'swiper',
+			content: [
+				{
+					elem: 'slide',
+					content: 'sdfsdf'
+				},
+				{
+					elem: 'button',
+					mods: { 'prev': true }
+				}
+			]
 		},
+		/* {
+			block: 'swiper-container',
+			content: [
+				{
+					block: 'swiper-wrapper',
+					content: [
+						{
+							block: 'swiper-slide',
+							attrs: { style: 'background-image: url(//avatars.yandex.net/get-bunker/4a5dd2c65a1ef7d4c168c7f89d6f4a5813930f86/normal/4a5dd2.jpg)' },
+							content: [
+								{
+									block: 'carousel__wrap',
+									content: [
+										
+											'<h1 class="title title_size_l carousel__title i-font i-font_face_textbook"><span class="quote">«</span>Вложенные смыслы»</h1><div class="carousel__text">Бывают вещи, которые <br>не так просты, как кажутся. <br>Как люди, только вещи.</div>'
+										
+									]							
+								}							
+							]
+						},
+						{
+							block: 'swiper-slide',
+							attrs: { style: 'background-image: url(//avatars.yandex.net/get-bunker/1e658fee17aa096070d08f48c8c3322efd46666c/normal/1e658f.jpg)' },
+							content: [
+								{
+									block: 'carousel__wrap',
+									content: [
+										
+											'<h1 class="title title_size_l carousel__title i-font i-font_face_textbook"><span class="quote">«</span>Вложенные смыслы»</h1><div class="carousel__text">Бывают вещи, которые <br>не так просты, как кажутся. <br>Как люди, только вещи.</div>'
+										
+									]							
+								}							
+							]
+						},
+						{
+							block: 'swiper-slide',
+							attrs: { style: 'background-image: url(//avatars.yandex.net/get-bunker/d54fb61bde7a728fed97d588ca670dce3b49f6b5/normal/d54fb6.jpg)' },
+							content: [
+								{
+									block: 'carousel__wrap',
+									content: [
+										
+											'<h1 class="title title_size_l carousel__title i-font i-font_face_textbook"><span class="quote">«</span>Вложенные смыслы»</h1><div class="carousel__text">Бывают вещи, которые <br>не так просты, как кажутся. <br>Как люди, только вещи.</div>'
+										
+									]							
+								}							
+							]
+						}
+					]
+				},
+				{
+					block: 'swiper-pagination'
+				},
+				{
+					block: 'swiper-button-prev'
+				},
+				{
+					block: 'swiper-button-next'
+				}				
+			]
+		}, */
 		{
 			block: 'sticky',
 			panelMix: [{ block: 'filter', js: true }, { block: 'shadow', mods: { 4: true } }],
@@ -66,7 +134,6 @@ module.exports = {
 													content: [
 														{
 															block : 'image',
-															mix: [{ block: 'lazy', js: true }],
 															url: 'https://yandex.ru/images/today?size=600x600',
 															alt: ''												
 														}
@@ -141,8 +208,9 @@ module.exports = {
 													elem: 'image',
 													content: [
 														{
-															tag: 'img',
-															attrs: { src: 'https://yandex.ru/images/today?size=600x600', alt: '' }										
+															block : 'image',
+															url: 'https://yandex.ru/images/today?size=600x600',
+															alt: ''												
 														}
 													]
 												},
@@ -215,8 +283,9 @@ module.exports = {
 													elem: 'image',
 													content: [
 														{
-															tag: 'img',
-															attrs: { src: 'https://yandex.ru/images/today?size=600x600', alt: '' }										
+															block : 'image',
+															url: 'https://yandex.ru/images/today?size=600x600',
+															alt: ''												
 														}
 													]
 												},
@@ -289,8 +358,9 @@ module.exports = {
 													elem: 'image',
 													content: [
 														{
-															tag: 'img',
-															attrs: { src: 'https://yandex.ru/images/today?size=600x600', alt: '' }										
+															block : 'image',
+															url: 'https://yandex.ru/images/today?size=600x600',
+															alt: ''												
 														}
 													]
 												},
@@ -363,8 +433,9 @@ module.exports = {
 													elem: 'image',
 													content: [
 														{
-															tag: 'img',
-															attrs: { src: 'https://yandex.ru/images/today?size=600x600', alt: '' }										
+															block : 'image',
+															url: 'https://yandex.ru/images/today?size=600x600',
+															alt: ''												
 														}
 													]
 												},
@@ -437,8 +508,9 @@ module.exports = {
 													elem: 'image',
 													content: [
 														{
-															tag: 'img',
-															attrs: { src: 'https://yandex.ru/images/today?size=600x600', alt: '' }										
+															block : 'image',
+															url: 'https://yandex.ru/images/today?size=600x600',
+															alt: ''												
 														}
 													]
 												},
@@ -511,8 +583,9 @@ module.exports = {
 													elem: 'image',
 													content: [
 														{
-															tag: 'img',
-															attrs: { src: 'https://yandex.ru/images/today?size=600x600', alt: '' }										
+															block : 'image',
+															url: 'https://yandex.ru/images/today?size=600x600',
+															alt: ''												
 														}
 													]
 												},
