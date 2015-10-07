@@ -1,6 +1,6 @@
 module.exports = {
     block: 'page',
-	mix: [{ js: true }],
+	/* mix: [{ js: true }], */
     title: 'ergo',
     head: [
         { elem : 'meta', attrs : { name : 'description', content : '' } },
@@ -15,16 +15,31 @@ module.exports = {
 			content: [
 				{
 					elem: 'slide',
-					content: 'sdfsdf'
+					content: 'slide 1'
 				},
+				{
+					elem: 'slide',
+					content: 'slide 2'
+				},
+				{
+					elem: 'slide',
+					content: 'slide 3'
+				},	
 				{
 					elem: 'button',
 					mods: { 'prev': true }
+				},	
+				{
+					elem: 'button',
+					mods: { 'next': true }
+				},	
+				{
+					elem: 'pagination'
 				}
 			]
 		},
 		/* {
-			block: 'swiper-container',
+			block: 'swiper',
 			content: [
 				{
 					block: 'swiper-wrapper',

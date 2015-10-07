@@ -1,38 +1,30 @@
 block('swiper')(
+	js()(true),
 	cls()('swiper-container')
-	/* elemMatch('slide').wrap()(function(){
-		return [
-			{
-				block: 'swiper-wrapper',
-				content: this.ctx.content
-			}
-		];
-	}), */
-	/* elem('button').mod('prev', true).cls()('swiper-button-prev'),
-	elem('button').mod('next', true).cls()('swiper-button-next'),
-	elem('button').mod('pagination', true).cls()('swiper-pagination') */
-	
-	/* content()(function(){
-		return [
-			{
-				block: 'swiper-wrapper',
-				content: applyNext()
-			},
-			{
-				elem: 'button',
-				mod: { prev: true },
-				cls: 'swiper-button-prev'
-			},
-			{
-				elem: 'button',
-				mod: { next: true },
-				cls: 'swiper-button-next'
-			},
-			{
-				elem: 'button',
-				mod: { pagination: true },
-				cls: 'swiper-pagination'
-			}			
-		]
-	}) */
 );
+elem('slide')(
+	cls()('swiper-slide')
+);
+elem('button')(
+	attrs()(function() { return { 'data-elemmods': this }; }),
+	match(function(){ return this.elemMods })(
+	)
+);
+elem('pagination')(
+	cls()('swiper-pagination')
+);
+/* block('b-inner').def()(function() {
+    return applyCtx({ block: 'b-wrapper', content: this.ctx });
+}); */
+
+/* // шаблон на первом уровне переопределения
+elem('slide').content()('text1') */
+
+// шаблон на втором уровне переопределения
+elem('slide').match(function() { return !this._wrapped; }).content()(function() {
+  return [
+	applyCtx({ block: 'b-wrapper', content: this.ctx })
+    /* apply({ _myGuard: true }),  // получаем предыдущее значение content
+    'text2' */
+  ];
+})

@@ -1,6 +1,5 @@
 ({
     shouldDeps: [
-        { block: 'modernizr' },
-        { block: 'swiper' }
+        { block: 'modernizr' }
     ]
 })
