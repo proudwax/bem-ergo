@@ -1,25 +1,22 @@
 /* global modules:false */
 
-modules.define('modernizr', function(provide) {
+modules.define('modernizr_lib', function(provide) {
  /* borschik:include:../../libs/modernizr/modernizr.js */;
 	provide(Modernizr);
 });
 
-/* modules.define('page', ['i-bem__dom', 'modernizr'], function(provide, BEMDOM, modernizr) {
+modules.define('page', ['i-bem__dom', 'modernizr_lib'], function(provide, BEMDOM, modernizr_lib) {
 
 provide(BEMDOM.decl(this.name, {
 	onSetMod : {
 		'js': {
             'inited': function() {
-				alert('re');
-				if (Modernizr.awesomeNewFeature) {
-					showOffAwesomeNewFeature();
-				} else {
-					getTheOldLameExperience();
-				}				
+				/* console.log(Modernizr); */
             }
         }
 	}
 }));
 
-}); */
+});
+
+

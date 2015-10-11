@@ -31,9 +31,10 @@
 	width: 100%;
 	position: absolute;
 	bottom: 0;
-	border-top :1px solid #ddd;
+	border-top: 1px solid #ddd;
 	background: rgba(255,255,255,.8);
-	padding-top: 1rem;
+	padding: .5rem;
+	box-sizing: border-box;
 }
 .goods__name{
 	margin-bottom: .5rem;
@@ -60,15 +61,3 @@
 .goods__action{
 	text-align: right;
 }
-/* .goods__action  .button__text, .goods__action .icon{
-	display: none !important;
-}
-.goods_visible_icon .goods__action  .icon{
-	display: inline-block !important;
-}
-.goods_visible_text .goods__action .button__text{
-	display: block !important;
-}
-.goods_visible_text .button_theme_baby .icon + .button__text{
-	margin: 0 13px;
-} */

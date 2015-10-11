@@ -1,0 +1,46 @@
+block('swiper')(
+	js()(true),
+	cls()('swiper-container'),
+	content()(function() {
+	    return applyNext().reduce(function(prev, cur) {
+	        if (cur.elem === 'slide') {
+	            prev[0].content.push(cur);
+	        } else {
+	            prev.push(cur);
+	        }
+
+	        return prev;
+	    }, [{ elem: 'wrapper', cls: 'swiper-wrapper', content: [] }]);
+	})
+);
+elem('slide')(
+	cls()('swiper-slide'),
+	attrs()(function() {
+            return { 'style': 'background:url('+this.ctx.bg+')' };
+        }
+	),
+	content()(function(){
+		return { block: 'slider-content', content: applyNext() };
+	})
+);
+elem('button')(
+	match(function(){ return this.ctx.mods.prev })(
+		cls()('swiper-button-prev')
+	),
+	match(function(){ return this.ctx.mods.next })(
+		cls()('swiper-button-next')
+	)
+);
+elem('pagination')(
+	cls()('swiper-pagination')
+);
+block('slider-content')(
+	content()(function(){
+		return { elem: 'wrapped', content: applyNext()};
+	})
+);
+elem('wrapped')(
+	content()(function(){
+		return [{ elem: 'title', content: 'zdfxdv', tag: 'h1' }, { elem: 'text', content: 'dscdcscs'  }]
+	})
+);

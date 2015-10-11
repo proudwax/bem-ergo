@@ -1,17 +1,54 @@
 module.exports = {
     block: 'page',
+	/* mix: [{ js: true }], */
     title: 'ergo',
     head: [
         { elem : 'meta', attrs : { name : 'description', content : '' } },
         { elem : 'meta', attrs : { name : 'viewport', content : 'width=device-width, initial-scale=1' } },
-        { elem: 'css', url: 'ergo.css' }
+        { elem: 'css', url: 'ergo.min.css' }
     ],
     scripts: [{ elem: 'js', url: 'ergo.min.js' }],
 	mods: { theme: 'ergo'},
-    content: [
-	   {
+    content: [ 
+		{
+			block: 'swiper',
+			content: [
+				{
+					elem: 'slide',
+					mods: { theme: 'white' },
+					bg: 'https://avatars.yandex.net/get-bunker/1e658fee17aa096070d08f48c8c3322efd46666c/normal/1e658f.jpg',
+					title: 'slide 1',
+					text: 'Text text text'
+				},
+				{
+					elem: 'slide',
+					mods: { theme: 'white' },
+					bg: 'https://avatars.yandex.net/get-bunker/4a5dd2c65a1ef7d4c168c7f89d6f4a5813930f86/normal/4a5dd2.jpg',
+					title: 'slide 2',
+					text: 'Text text text'
+				},
+				{
+					elem: 'slide',
+					mods: { theme: 'white' },
+					content: 'slide 3',
+					bg: 'https://avatars.yandex.net/get-bunker/d54fb61bde7a728fed97d588ca670dce3b49f6b5/normal/d54fb6.jpg'
+				},	
+				{
+					elem: 'button',
+					mods: { 'prev': true }
+				},	
+				{
+					elem: 'button',
+					mods: { 'next': true }
+				},	
+				{
+					elem: 'pagination'
+				}
+			]
+		},
+		{
 			block: 'sticky',
-			mix: [ { js: true }, { block: 'filter', js: true }, { block: 'shadow', mods: { 4: true } }],
+			panelMix: [{ block: 'filter', js: true }],
 			content: [
 				{
 					block: 'radio-group',
@@ -27,529 +64,539 @@ module.exports = {
 					]
 				}
 			]
-	   },	
-       {
+		},	
+		{
            block: 'content',
            content: [
                'block content'
            ]
-       },
-{
-			block: 'goods-list',
-			mix: [{ js: true }],
-			cls: 'row',
+		},
+		{
+			block: 'section',
 			content: [
 				{
-					elem: 'item',
-					cls: 'col-xs-12 col-sm-6 col-md-4 col-lg-3',
-					js: { filter: 2 },
+					block: 'goods-list',
+					mix: [{ js: true }],
+					cls: 'row',
 					content: [
 						{
-							block: 'goods',
-							mix: [{ block: 'shadow', mods: { 2: true } }],
+							elem: 'item',
+							cls: 'col-xs-12 col-sm-6 col-md-4 col-lg-3',
+							js: { filter: 2 },
 							content: [
 								{
-									elem: 'content',
+									block: 'goods',
+									mix: [{ block: 'shadow', mods: { 2: true } }],
 									content: [
 										{
-											elem: 'image',
+											elem: 'content',
 											content: [
 												{
-													block : 'image',
-													mix: [{ block: 'lazy', js: true }],
-													url: 'i/promo4.png',
-													alt: ''												
-												}
-											]
-										},
-										{
-											elem: 'text',
-											content: [
-												{
-													elem: 'name',
-													mods: { size: 'xl' },
+													elem: 'image',
 													content: [
-														'Organic Navy'	
-													]
-												},
-												{
-													elem: 'price',
-													mods: { size: 'xl' },
-													content: [
-														'10 000',
 														{
-															block: 'icon',
-															cls: 'fa fa-rub'
+															block : 'image',
+															url: 'https://yandex.ru/images/today?size=600x600',
+															alt: ''												
 														}
 													]
 												},
 												{
-													elem: 'action',
-													mix: [{ block : 'control-group' }], 
-													content:[
+													elem: 'text',
+													content: [
 														{
-															block: 'button',
-															mods: { theme: 'ergo', size: 'm' },
-															text: 'Подробнее',
-															icon: {
-																block: 'icon',
-																cls: 'fa fa-search-plus'
-															}
+															elem: 'name',
+															mods: { size: 'xl' },
+															content: [
+																'Organic Navy'	
+															]
 														},
 														{
-															block: 'button',
-															mods: { view : 'action', theme: 'ergo', size: 'm' },
-															text: 'Купить',
-															icon: {
-																block: 'icon',
-																cls: 'fa fa-shopping-cart'
-															}
+															elem: 'price',
+															mods: { size: 'xl' },
+															content: [
+																'10 000',
+																{
+																	block: 'icon',
+																	cls: 'fa fa-rub'
+																}
+															]
+														},
+														{
+															elem: 'action',
+															mix: [{ block : 'control-group' }], 
+															content:[
+																{
+																	block: 'button',
+																	mods: { theme: 'ergo', size: 'm' },
+																	text: 'Подробнее',
+																	icon: {
+																		block: 'icon',
+																		cls: 'fa fa-search-plus'
+																	}
+																},
+																{
+																	block: 'button',
+																	mods: { view : 'action', theme: 'ergo', size: 'm' },
+																	text: 'Купить',
+																	icon: {
+																		block: 'icon',
+																		cls: 'fa fa-shopping-cart'
+																	}
+																}
+															]	
 														}
-													]	
+													]
 												}
 											]
 										}
 									]
 								}
 							]
-						}
-					]
-				},
-				{
-					elem: 'item',
-					cls: 'col-xs-12 col-sm-6 col-md-4 col-lg-3',
-					js: { filter: 2 },
-					content: [
+						},
 						{
-							block: 'goods',
-							mix: [{ block: 'shadow', mods: { 2: true } }],
+							elem: 'item',
+							cls: 'col-xs-12 col-sm-6 col-md-4 col-lg-3',
+							js: { filter: 2 },
 							content: [
 								{
-									elem: 'content',
+									block: 'goods',
+									mix: [{ block: 'shadow', mods: { 2: true } }],
 									content: [
 										{
-											elem: 'image',
+											elem: 'content',
 											content: [
 												{
-													tag: 'img',
-													attrs: { src: 'i/promo2.png', alt: '' }										
-												}
-											]
-										},
-										{
-											elem: 'text',
-											content: [
-												{
-													elem: 'name',
-													mods: { size: 'xl' },
+													elem: 'image',
 													content: [
-														'Organic Bundle of Joy - Navy'	
-													]
-												},
-												{
-													elem: 'price',
-													mods: { size: 'xl' },
-													content: [
-														'10 000',
 														{
-															block: 'icon',
-															cls: 'fa fa-rub'
+															block : 'image',
+															url: 'https://yandex.ru/images/today?size=600x600',
+															alt: ''												
 														}
 													]
 												},
 												{
-													elem: 'action',
-													mix: [{ block : 'control-group' }], 
-													content:[
+													elem: 'text',
+													content: [
 														{
-															block: 'button',
-															mods: { theme: 'ergo', size: 'm' },
-															text: 'Подробнее',
-															icon: {
-																block: 'icon',
-																cls: 'fa fa-search-plus'
-															}
+															elem: 'name',
+															mods: { size: 'xl' },
+															content: [
+																'Organic Bundle of Joy - Navy'	
+															]
 														},
 														{
-															block: 'button',
-															mods: { view : 'action', theme: 'ergo', size: 'm' },
-															text: 'Купить',
-															icon: {
-																block: 'icon',
-																cls: 'fa fa-shopping-cart'
-															}
+															elem: 'price',
+															mods: { size: 'xl' },
+															content: [
+																'10 000',
+																{
+																	block: 'icon',
+																	cls: 'fa fa-rub'
+																}
+															]
+														},
+														{
+															elem: 'action',
+															mix: [{ block : 'control-group' }], 
+															content:[
+																{
+																	block: 'button',
+																	mods: { theme: 'ergo', size: 'm' },
+																	text: 'Подробнее',
+																	icon: {
+																		block: 'icon',
+																		cls: 'fa fa-search-plus'
+																	}
+																},
+																{
+																	block: 'button',
+																	mods: { view : 'action', theme: 'ergo', size: 'm' },
+																	text: 'Купить',
+																	icon: {
+																		block: 'icon',
+																		cls: 'fa fa-shopping-cart'
+																	}
+																}
+															]	
 														}
-													]	
+													]
 												}
 											]
 										}
 									]
 								}
 							]
-						}
-					]
-				},
-				{
-					elem: 'item',
-					cls: 'col-xs-12 col-sm-6 col-md-4 col-lg-3',
-					js: { filter: 3 },
-					content: [
+						},
 						{
-							block: 'goods',
-							mix: [{ block: 'shadow', mods: { 2: true } }],
+							elem: 'item',
+							cls: 'col-xs-12 col-sm-6 col-md-4 col-lg-3',
+							js: { filter: 3 },
 							content: [
 								{
-									elem: 'content',
+									block: 'goods',
+									mix: [{ block: 'shadow', mods: { 2: true } }],
 									content: [
 										{
-											elem: 'image',
+											elem: 'content',
 											content: [
 												{
-													tag: 'img',
-													attrs: { src: 'i/promo3.png', alt: '' }										
-												}
-											]
-										},
-										{
-											elem: 'text',
-											content: [
-												{
-													elem: 'name',
-													mods: { size: 'xl' },
+													elem: 'image',
 													content: [
-														'Original Bundle of Joy - Black/Camel'	
-													]
-												},
-												{
-													elem: 'price',
-													mods: { size: 'xl' },
-													content: [
-														'10 000',
 														{
-															block: 'icon',
-															cls: 'fa fa-rub'
+															block : 'image',
+															url: 'https://yandex.ru/images/today?size=600x600',
+															alt: ''												
 														}
 													]
 												},
 												{
-													elem: 'action',
-													mix: [{ block : 'control-group' }], 
-													content:[
+													elem: 'text',
+													content: [
 														{
-															block: 'button',
-															mods: { theme: 'ergo', size: 'm' },
-															text: 'Подробнее',
-															icon: {
-																block: 'icon',
-																cls: 'fa fa-search-plus'
-															}
+															elem: 'name',
+															mods: { size: 'xl' },
+															content: [
+																'Original Bundle of Joy - Black/Camel'	
+															]
 														},
 														{
-															block: 'button',
-															mods: { view : 'action', theme: 'ergo', size: 'm' },
-															text: 'Купить',
-															icon: {
-																block: 'icon',
-																cls: 'fa fa-shopping-cart'
-															}
+															elem: 'price',
+															mods: { size: 'xl' },
+															content: [
+																'10 000',
+																{
+																	block: 'icon',
+																	cls: 'fa fa-rub'
+																}
+															]
+														},
+														{
+															elem: 'action',
+															mix: [{ block : 'control-group' }], 
+															content:[
+																{
+																	block: 'button',
+																	mods: { theme: 'ergo', size: 'm' },
+																	text: 'Подробнее',
+																	icon: {
+																		block: 'icon',
+																		cls: 'fa fa-search-plus'
+																	}
+																},
+																{
+																	block: 'button',
+																	mods: { view : 'action', theme: 'ergo', size: 'm' },
+																	text: 'Купить',
+																	icon: {
+																		block: 'icon',
+																		cls: 'fa fa-shopping-cart'
+																	}
+																}
+															]	
 														}
-													]	
+													]
 												}
 											]
 										}
 									]
 								}
 							]
-						}
-					]
-				},
-				{
-					elem: 'item',
-					cls: 'col-xs-12 col-sm-6 col-md-4 col-lg-3',
-					js: { filter: 4 },
-					content: [
+						},
 						{
-							block: 'goods',
-							mix: [{ block: 'shadow', mods: { 2: true } }],
+							elem: 'item',
+							cls: 'col-xs-12 col-sm-6 col-md-4 col-lg-3',
+							js: { filter: 4 },
 							content: [
 								{
-									elem: 'content',
+									block: 'goods',
+									mix: [{ block: 'shadow', mods: { 2: true } }],
 									content: [
 										{
-											elem: 'image',
+											elem: 'content',
 											content: [
 												{
-													tag: 'img',
-													attrs: { src: 'i/promo1.png', alt: '' }										
-												}
-											]
-										},
-										{
-											elem: 'text',
-											content: [
-												{
-													elem: 'name',
-													mods: { size: 'xl' },
+													elem: 'image',
 													content: [
-														'Organic Zen'	
-													]
-												},
-												{
-													elem: 'price',
-													mods: { size: 'xl' },
-													content: [
-														'10 000',
 														{
-															block: 'icon',
-															cls: 'fa fa-rub'
+															block : 'image',
+															url: 'https://yandex.ru/images/today?size=600x600',
+															alt: ''												
 														}
 													]
 												},
 												{
-													elem: 'action',
-													mix: [{ block : 'control-group' }], 
-													content:[
+													elem: 'text',
+													content: [
 														{
-															block: 'button',
-															mods: { theme: 'ergo', size: 'm' },
-															text: 'Подробнее',
-															icon: {
-																block: 'icon',
-																cls: 'fa fa-search-plus'
-															}
+															elem: 'name',
+															mods: { size: 'xl' },
+															content: [
+																'Organic Zen'	
+															]
 														},
 														{
-															block: 'button',
-															mods: { view : 'action', theme: 'ergo', size: 'm' },
-															text: 'Купить',
-															icon: {
-																block: 'icon',
-																cls: 'fa fa-shopping-cart'
-															}
+															elem: 'price',
+															mods: { size: 'xl' },
+															content: [
+																'10 000',
+																{
+																	block: 'icon',
+																	cls: 'fa fa-rub'
+																}
+															]
+														},
+														{
+															elem: 'action',
+															mix: [{ block : 'control-group' }], 
+															content:[
+																{
+																	block: 'button',
+																	mods: { theme: 'ergo', size: 'm' },
+																	text: 'Подробнее',
+																	icon: {
+																		block: 'icon',
+																		cls: 'fa fa-search-plus'
+																	}
+																},
+																{
+																	block: 'button',
+																	mods: { view : 'action', theme: 'ergo', size: 'm' },
+																	text: 'Купить',
+																	icon: {
+																		block: 'icon',
+																		cls: 'fa fa-shopping-cart'
+																	}
+																}
+															]	
 														}
-													]	
+													]
 												}
 											]
 										}
 									]
 								}
 							]
-						}
-					]
-				},
-				{
-					elem: 'item',
-					cls: 'col-xs-12 col-sm-6 col-md-4 col-lg-3',
-					js: { filter: 4 },
-					content: [
+						},
 						{
-							block: 'goods',
-							mix: [{ block: 'shadow', mods: { 2: true } }],
+							elem: 'item',
+							cls: 'col-xs-12 col-sm-6 col-md-4 col-lg-3',
+							js: { filter: 4 },
 							content: [
 								{
-									elem: 'content',
+									block: 'goods',
+									mix: [{ block: 'shadow', mods: { 2: true } }],
 									content: [
 										{
-											elem: 'image',
+											elem: 'content',
 											content: [
 												{
-													tag: 'img',
-													attrs: { src: 'i/promo5.png', alt: '' }										
-												}
-											]
-										},
-										{
-											elem: 'text',
-											content: [
-												{
-													elem: 'name',
-													mods: { size: 'xl' },
+													elem: 'image',
 													content: [
-														'Organic Dandelion'	
-													]
-												},
-												{
-													elem: 'price',
-													mods: { size: 'xl' },
-													content: [
-														'10 000',
 														{
-															block: 'icon',
-															cls: 'fa fa-rub'
+															block : 'image',
+															url: 'https://yandex.ru/images/today?size=600x600',
+															alt: ''												
 														}
 													]
 												},
 												{
-													elem: 'action',
-													mix: [{ block : 'control-group' }], 
-													content:[
+													elem: 'text',
+													content: [
 														{
-															block: 'button',
-															mods: { theme: 'ergo', size: 'm' },
-															text: 'Подробнее',
-															icon: {
-																block: 'icon',
-																cls: 'fa fa-search-plus'
-															}
+															elem: 'name',
+															mods: { size: 'xl' },
+															content: [
+																'Organic Dandelion'	
+															]
 														},
 														{
-															block: 'button',
-															mods: { view : 'action', theme: 'ergo', size: 'm' },
-															text: 'Купить',
-															icon: {
-																block: 'icon',
-																cls: 'fa fa-shopping-cart'
-															}
+															elem: 'price',
+															mods: { size: 'xl' },
+															content: [
+																'10 000',
+																{
+																	block: 'icon',
+																	cls: 'fa fa-rub'
+																}
+															]
+														},
+														{
+															elem: 'action',
+															mix: [{ block : 'control-group' }], 
+															content:[
+																{
+																	block: 'button',
+																	mods: { theme: 'ergo', size: 'm' },
+																	text: 'Подробнее',
+																	icon: {
+																		block: 'icon',
+																		cls: 'fa fa-search-plus'
+																	}
+																},
+																{
+																	block: 'button',
+																	mods: { view : 'action', theme: 'ergo', size: 'm' },
+																	text: 'Купить',
+																	icon: {
+																		block: 'icon',
+																		cls: 'fa fa-shopping-cart'
+																	}
+																}
+															]	
 														}
-													]	
+													]
 												}
 											]
 										}
 									]
 								}
 							]
-						}
-					]
-				},
-				{
-					elem: 'item',
-					cls: 'col-xs-12 col-sm-6 col-md-4 col-lg-3',
-					js: { filter: 4 },
-					content: [
+						},
 						{
-							block: 'goods',
-							mix: [{ block: 'shadow', mods: { 2: true } }],
+							elem: 'item',
+							cls: 'col-xs-12 col-sm-6 col-md-4 col-lg-3',
+							js: { filter: 4 },
 							content: [
 								{
-									elem: 'content',
+									block: 'goods',
+									mix: [{ block: 'shadow', mods: { 2: true } }],
 									content: [
 										{
-											elem: 'image',
+											elem: 'content',
 											content: [
 												{
-													tag: 'img',
-													attrs: { src: 'i/promo6.png', alt: '' }										
-												}
-											]
-										},
-										{
-											elem: 'text',
-											content: [
-												{
-													elem: 'name',
-													mods: { size: 'xl' },
+													elem: 'image',
 													content: [
-														'Organic Quartz'	
-													]
-												},
-												{
-													elem: 'price',
-													mods: { size: 'xl' },
-													content: [
-														'10 000',
 														{
-															block: 'icon',
-															cls: 'fa fa-rub'
+															block : 'image',
+															url: 'https://yandex.ru/images/today?size=600x600',
+															alt: ''												
 														}
 													]
 												},
 												{
-													elem: 'action',
-													mix: [{ block : 'control-group' }], 
-													content:[
+													elem: 'text',
+													content: [
 														{
-															block: 'button',
-															mods: { theme: 'ergo', size: 'm' },
-															text: 'Подробнее',
-															icon: {
-																block: 'icon',
-																cls: 'fa fa-search-plus'
-															}
+															elem: 'name',
+															mods: { size: 'xl' },
+															content: [
+																'Organic Quartz'	
+															]
 														},
 														{
-															block: 'button',
-															mods: { view : 'action', theme: 'ergo', size: 'm' },
-															text: 'Купить',
-															icon: {
-																block: 'icon',
-																cls: 'fa fa-shopping-cart'
-															}
+															elem: 'price',
+															mods: { size: 'xl' },
+															content: [
+																'10 000',
+																{
+																	block: 'icon',
+																	cls: 'fa fa-rub'
+																}
+															]
+														},
+														{
+															elem: 'action',
+															mix: [{ block : 'control-group' }], 
+															content:[
+																{
+																	block: 'button',
+																	mods: { theme: 'ergo', size: 'm' },
+																	text: 'Подробнее',
+																	icon: {
+																		block: 'icon',
+																		cls: 'fa fa-search-plus'
+																	}
+																},
+																{
+																	block: 'button',
+																	mods: { view : 'action', theme: 'ergo', size: 'm' },
+																	text: 'Купить',
+																	icon: {
+																		block: 'icon',
+																		cls: 'fa fa-shopping-cart'
+																	}
+																}
+															]	
 														}
-													]	
+													]
 												}
 											]
 										}
 									]
 								}
 							]
-						}
-					]
-				},
-				{
-					elem: 'item',
-					cls: 'col-xs-12 col-sm-6 col-md-4 col-lg-3',
-					js: { filter: 4 },
-					content: [
+						},
 						{
-							block: 'goods',
-							mix: [{ block: 'shadow', mods: { 2: true } }],
+							elem: 'item',
+							cls: 'col-xs-12 col-sm-6 col-md-4 col-lg-3',
+							js: { filter: 4 },
 							content: [
 								{
-									elem: 'content',
+									block: 'goods',
+									mix: [{ block: 'shadow', mods: { 2: true } }],
 									content: [
 										{
-											elem: 'image',
+											elem: 'content',
 											content: [
 												{
-													tag: 'img',
-													attrs: { src: 'i/promo7.png', alt: '' }										
-												}
-											]
-										},
-										{
-											elem: 'text',
-											content: [
-												{
-													elem: 'name',
-													mods: { size: 'xl' },
+													elem: 'image',
 													content: [
-														'Organic Dark Cocoa'	
-													]
-												},
-												{
-													elem: 'price',
-													mods: { size: 'xl' },
-													content: [
-														'10 000',
 														{
-															block: 'icon',
-															cls: 'fa fa-rub'
+															block : 'image',
+															url: 'https://yandex.ru/images/today?size=600x600',
+															alt: ''												
 														}
 													]
 												},
 												{
-													elem: 'action',
-													mix: [{ block : 'control-group' }], 
-													content:[
+													elem: 'text',
+													content: [
 														{
-															block: 'button',
-															mods: { theme: 'ergo', size: 'm' },
-															text: 'Подробнее',
-															icon: {
-																block: 'icon',
-																cls: 'fa fa-search-plus'
-															}
+															elem: 'name',
+															mods: { size: 'xl' },
+															content: [
+																'Organic Dark Cocoa'	
+															]
 														},
 														{
-															block: 'button',
-															mods: { view : 'action', theme: 'ergo', size: 'm' },
-															text: 'Купить',
-															icon: {
-																block: 'icon',
-																cls: 'fa fa-shopping-cart'
-															}
+															elem: 'price',
+															mods: { size: 'xl' },
+															content: [
+																'10 000',
+																{
+																	block: 'icon',
+																	cls: 'fa fa-rub'
+																}
+															]
+														},
+														{
+															elem: 'action',
+															mix: [{ block : 'control-group' }], 
+															content:[
+																{
+																	block: 'button',
+																	mods: { theme: 'ergo', size: 'm' },
+																	text: 'Подробнее',
+																	icon: {
+																		block: 'icon',
+																		cls: 'fa fa-search-plus'
+																	}
+																},
+																{
+																	block: 'button',
+																	mods: { view : 'action', theme: 'ergo', size: 'm' },
+																	text: 'Купить',
+																	icon: {
+																		block: 'icon',
+																		cls: 'fa fa-shopping-cart'
+																	}
+																}
+															]	
 														}
-													]	
+													]
 												}
 											]
 										}
@@ -560,6 +607,12 @@ module.exports = {
 					]
 				}
 			]
-		}
+		},
+		{
+			block : 'image',
+			url : 'https://yandex.ru/images/today?size=1920x800',
+			title : 'Все подробности на bem.info',
+			width : '100%'
+		}		
     ]
 };
