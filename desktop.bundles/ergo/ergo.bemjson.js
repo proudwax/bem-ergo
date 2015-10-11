@@ -104,6 +104,7 @@ module.exports = {
 												{
 													elem: 'text',
 													content: [
+<<<<<<< HEAD
 														{
 															elem: 'name',
 															mods: { size: 'xl' },
