@@ -1,0 +1,13 @@
+.swiper__slide{
+	background-repeat: none;
+}
+.swiper__slide_theme_white{
+	color: #fff;
+}
+.slider-content{
+	padding: 0 5rem;
+	width: 100%;
+}
+.slider-content__wrapped{
+	max-width: 50%;
+}

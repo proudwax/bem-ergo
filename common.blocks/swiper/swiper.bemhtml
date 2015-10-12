@@ -8,7 +8,6 @@ block('swiper')(
 	        } else {
 	            prev.push(cur);
 	        }
-
 	        return prev;
 	    }, [{ elem: 'wrapper', cls: 'swiper-wrapper', content: [] }]);
 	})
@@ -16,11 +15,21 @@ block('swiper')(
 elem('slide')(
 	cls()('swiper-slide'),
 	attrs()(function() {
-            return { 'style': 'background:url('+this.ctx.bg+')' };
+            return { 'style': 'background-image:url(' + this.ctx.bg + ')' };
         }
 	),
 	content()(function(){
 		return { block: 'slider-content', content: applyNext() };
+	})
+);
+block('slider-content')(
+	content()(function(){
+		return { elem: 'wrapped', content: applyNext()};
+	})
+);
+elem('wrapped')(
+	content()(function(){
+		return [{ elem: 'title', content: 'dfgdfg', tag: 'h1' }, { elem: 'text', content: 'dscdcscs'  }]; // content: this.ctx.title | content: this.ctx.text, не отображается, так как нет у данного элемента контекста. 
 	})
 );
 elem('button')(
@@ -33,14 +42,4 @@ elem('button')(
 );
 elem('pagination')(
 	cls()('swiper-pagination')
-);
-block('slider-content')(
-	content()(function(){
-		return { elem: 'wrapped', content: applyNext()};
-	})
-);
-elem('wrapped')(
-	content()(function(){
-		return [{ elem: 'title', content: 'zdfxdv', tag: 'h1' }, { elem: 'text', content: 'dscdcscs'  }]
-	})
 );
