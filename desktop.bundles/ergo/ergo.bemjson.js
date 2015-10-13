@@ -24,14 +24,14 @@ module.exports = {
 					elem: 'slide',
 					mods: { theme: 'white' },
 					bg: 'https://avatars.yandex.net/get-bunker/4a5dd2c65a1ef7d4c168c7f89d6f4a5813930f86/normal/4a5dd2.jpg',
-					title: 'slide 2',
-					text: 'Text text text'
+					title: 'Много необычных, красивых и при этом удивительно полезных штук'
 				},
 				{
 					elem: 'slide',
 					mods: { theme: 'white' },
-					content: 'slide 3',
-					bg: 'https://avatars.yandex.net/get-bunker/d54fb61bde7a728fed97d588ca670dce3b49f6b5/normal/d54fb6.jpg'
+					bg: 'https://avatars.yandex.net/get-bunker/d54fb61bde7a728fed97d588ca670dce3b49f6b5/normal/d54fb6.jpg',
+					title: '«Прятки» — новая коллекция',
+					text: 'Короткая история о том, как спрятался тот, кто обычно находит.'
 				},	
 				{
 					elem: 'button',
@@ -86,7 +86,7 @@ module.exports = {
 							content: [
 								{
 									block: 'goods',
-									mix: [{ block: 'shadow', mods: { 2: true } }],
+									mods: { 'shadow': true },
 									content: [
 										{
 											elem: 'content',
@@ -161,7 +161,7 @@ module.exports = {
 							content: [
 								{
 									block: 'goods',
-									mix: [{ block: 'shadow', mods: { 2: true } }],
+									mods: { 'shadow': true },
 									content: [
 										{
 											elem: 'content',
@@ -236,7 +236,7 @@ module.exports = {
 							content: [
 								{
 									block: 'goods',
-									mix: [{ block: 'shadow', mods: { 2: true } }],
+									mods: { 'shadow': true },
 									content: [
 										{
 											elem: 'content',
@@ -311,7 +311,7 @@ module.exports = {
 							content: [
 								{
 									block: 'goods',
-									mix: [{ block: 'shadow', mods: { 2: true } }],
+									mods: { 'shadow': true },
 									content: [
 										{
 											elem: 'content',
@@ -386,7 +386,7 @@ module.exports = {
 							content: [
 								{
 									block: 'goods',
-									mix: [{ block: 'shadow', mods: { 2: true } }],
+									mods: { 'shadow': true },
 									content: [
 										{
 											elem: 'content',
@@ -461,7 +461,7 @@ module.exports = {
 							content: [
 								{
 									block: 'goods',
-									mix: [{ block: 'shadow', mods: { 2: true } }],
+									mods: { 'shadow': true },
 									content: [
 										{
 											elem: 'content',
@@ -536,7 +536,7 @@ module.exports = {
 							content: [
 								{
 									block: 'goods',
-									mix: [{ block: 'shadow', mods: { 2: true } }],
+									mods: { 'shadow': true },
 									content: [
 										{
 											elem: 'content',

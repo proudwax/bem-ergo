@@ -19,17 +19,27 @@ elem('slide')(
         }
 	),
 	content()(function(){
-		return { block: 'slider-content', content: applyNext() };
-	})
-);
-block('slider-content')(
-	content()(function(){
-		return { elem: 'wrapped', content: applyNext()};
-	})
-);
-elem('wrapped')(
-	content()(function(){
-		return [{ elem: 'title', content: 'dfgdfg', tag: 'h1' }, { elem: 'text', content: 'dscdcscs'  }]; // content: this.ctx.title | content: this.ctx.text, не отображается, так как нет у данного элемента контекста. 
+		var _title = this.ctx.title,
+			_text = this.ctx.text;
+		return { 
+			block: 'slider-content', 
+			content: [
+				{
+					elem: 'wrapped',
+					content: [
+						{
+							elem: 'title',
+							tag: 'h1',
+							content: _title
+						},
+						{
+							elem: 'text',
+							content: _text
+						}
+					]
+				}
+			]
+		};
 	})
 );
 elem('button')(

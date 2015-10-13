@@ -11,3 +11,9 @@
 .slider-content__wrapped{
 	max-width: 50%;
 }
+.slider-content__title{
+	font: 300 3rem/3.2rem "Roboto",Helvetica,sans-serif
+}
+.slider-content__text{
+	font: 100 1.5rem/1.6rem "Roboto",Helvetica,sans-serif
+}
