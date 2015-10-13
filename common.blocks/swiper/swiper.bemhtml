@@ -10,46 +10,48 @@ block('swiper')(
 	        }
 	        return prev;
 	    }, [{ elem: 'wrapper', cls: 'swiper-wrapper', content: [] }]);
-	})
-);
-elem('slide')(
-	cls()('swiper-slide'),
-	attrs()(function() {
-            return { 'style': 'background-image:url(' + this.ctx.bg + ')' };
-        }
+	}),
+	elem('slide')(
+		cls()('swiper-slide'),
+		attrs()(function() {
+				return { 'style': 'background-image:url(' + this.ctx.bg + ')' };
+			}
+		),
+		content()(function(){
+			var _title = this.ctx.title,
+				_text = this.ctx.text;
+			return { 
+				block: 'slider-content', 
+				content: [
+					{
+						elem: 'inner',
+						content: [
+							{
+								elem: 'title',
+								content: _title
+							},
+							{
+								elem: 'text',
+								content: _text
+							}
+						]
+					}
+				]
+			};
+		})
 	),
-	content()(function(){
-		var _title = this.ctx.title,
-			_text = this.ctx.text;
-		return { 
-			block: 'slider-content', 
-			content: [
-				{
-					elem: 'wrapped',
-					content: [
-						{
-							elem: 'title',
-							tag: 'h1',
-							content: _title
-						},
-						{
-							elem: 'text',
-							content: _text
-						}
-					]
-				}
-			]
-		};
-	})
-);
-elem('button')(
-	match(function(){ return this.ctx.mods.prev })(
-		cls()('swiper-button-prev')
+	elem('title')(
+		tag()('h1')
 	),
-	match(function(){ return this.ctx.mods.next })(
-		cls()('swiper-button-next')
+	elem('button')(
+		match(function(){ return this.elemMods.prev })(
+			cls()('swiper-button-prev')
+		),
+		match(function(){ return this.elemMods.next })(
+			cls()('swiper-button-next')
+		)
+	),
+	elem('pagination')(
+		cls()('swiper-pagination')
 	)
-);
-elem('pagination')(
-	cls()('swiper-pagination')
 );

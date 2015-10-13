@@ -35,11 +35,11 @@ module.exports = {
 				},	
 				{
 					elem: 'button',
-					mods: { 'prev': true }
+					elemMods: { 'prev': true }
 				},	
 				{
 					elem: 'button',
-					mods: { 'next': true }
+					elemMods: { 'next': true }
 				},	
 				{
 					elem: 'pagination'

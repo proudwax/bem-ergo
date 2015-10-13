@@ -8,12 +8,15 @@
 	padding: 0 5rem;
 	width: 100%;
 }
-.slider-content__wrapped{
+.slider-content__inner{
 	max-width: 50%;
 }
 .slider-content__title{
-	font: 300 3rem/3.2rem "Roboto",Helvetica,sans-serif
+	font: 300 3rem/3.2rem "Roboto",Helvetica,sans-serif;
+	text-shadow: 0 2px 2px rgba(0, 0, 0, 0.14), 0 3px 1px rgba(0, 0, 0, 0.2), 0 1px 5px rgba(0, 0, 0, 0.12);
+	
+	margin: 1rem 0;
 }
 .slider-content__text{
-	font: 100 1.5rem/1.6rem "Roboto",Helvetica,sans-serif
+	font: 100 1.5rem/1.6rem "Roboto",Helvetica,sans-serif;
 }
