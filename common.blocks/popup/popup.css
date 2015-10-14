@@ -1,0 +1,32 @@
+.popup__tail::after {
+    bottom: 1px;
+    content: "";
+    left: 1px;
+	background: #fff none repeat scroll 0 0;
+}
+.popup__tail, .popup__tail::after {
+    height: 16px;
+    position: absolute;
+    width: 16px;
+}
+.popup__tail {
+    margin-left: calc(50% - 8px);
+    top: -10px;
+    transform: rotate(135deg);
+}
+.popup__tail {
+    display: block;
+    font: 0px/0 a;
+    z-index: 9;
+	background: rgba(0, 0, 0, 0) linear-gradient(to right top, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0) 50%) repeat scroll 0 0;
+}
+.popup__content {
+    height: 100%;
+    margin: 0;
+    padding: 4px 8px;
+    position: relative;
+    z-index: 10;
+}
+.popup, .popup__content {
+    box-sizing: border-box;
+}

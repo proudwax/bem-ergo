@@ -24,22 +24,22 @@ module.exports = {
 					elem: 'slide',
 					mods: { theme: 'white' },
 					bg: 'https://avatars.yandex.net/get-bunker/4a5dd2c65a1ef7d4c168c7f89d6f4a5813930f86/normal/4a5dd2.jpg',
-					title: 'slide 2',
-					text: 'Text text text'
+					title: 'Много необычных, красивых и при этом удивительно полезных штук'
 				},
 				{
 					elem: 'slide',
 					mods: { theme: 'white' },
-					content: 'slide 3',
-					bg: 'https://avatars.yandex.net/get-bunker/d54fb61bde7a728fed97d588ca670dce3b49f6b5/normal/d54fb6.jpg'
+					bg: 'https://avatars.yandex.net/get-bunker/d54fb61bde7a728fed97d588ca670dce3b49f6b5/normal/d54fb6.jpg',
+					title: '«Прятки» — новая коллекция',
+					text: 'Короткая история о том, как спрятался тот, кто обычно находит.'
 				},	
 				{
 					elem: 'button',
-					mods: { 'prev': true }
+					elemMods: { 'prev': true }
 				},	
 				{
 					elem: 'button',
-					mods: { 'next': true }
+					elemMods: { 'next': true }
 				},	
 				{
 					elem: 'pagination'
@@ -48,19 +48,70 @@ module.exports = {
 		},
 		{
 			block: 'sticky',
-			panelMix: [{ block: 'filter', js: true }],
-			content: [
+			/* panelMix: [{  }], */
+			/* panelCls: '' */
+			content: [	
 				{
-					block: 'radio-group',
-					mix: [{ block: 'filter', elem: 'group' }],
-					mods: { theme : 'ergo', size : 'm', type : 'button' },
-					name: 'radio',
-					val: '',
-					options: [
-						{ val: '', text : 'Все' },
-						{ val: 2, text : 'Original' },
-						{ val: 3, text : 'Performance' },
-						{ val: 4, text : 'Four Position 360' }
+					block: 'header',
+					cls: 'row',
+					content: [
+						{
+							elem: 'item',
+							mix: [{ block: 'filter', js: true }],
+							cls: 'col-xs-9 col-sm-9 col-md-9 col-lg-9',
+							content: [
+								{
+									block: 'radio-group',
+									mix: [{ block: 'filter', elem: 'group' }],
+									mods: { theme : 'ergo', size : 'm', type : 'button' },
+									name: 'radio',
+									val: '',
+									options: [
+										{ val: '', text : 'Все' },
+										{ val: 2, text : 'Original' },
+										{ val: 3, text : 'Performance' },
+										{ val: 4, text : 'Four Position 360' }
+									]
+								}
+							]
+						},
+						{
+							elem: 'item',
+							cls: 'col-xs-3 col-sm-3 col-md-3 col-lg-3',
+							content: [
+								{
+									block: 'cart',
+									js: true,
+									content: [
+										{
+											block : 'button',
+											mods : { theme : 'ergo', size : 'm', view : 'action' },
+											text : 'Корзина',
+											icon: {
+												block: 'icon',
+												cls: 'fa fa-shopping-cart'
+											},
+											badge: 2
+										},
+										{
+											block : 'popup',
+											mods : { theme : 'islands', target : 'anchor', autoclosable : true },
+											mainOffset : 10,
+											directions : ['bottom-center'],
+											content: [
+												{
+													elem: 'tail'
+												},
+												{
+													elem: 'content',
+													content: 'Корзина пуска'
+												}
+											]
+										}
+									]
+								}
+							]
+						}
 					]
 				}
 			]
@@ -76,7 +127,7 @@ module.exports = {
 			content: [
 				{
 					block: 'goods-list',
-					mix: [{ js: true }],
+					js: true,
 					cls: 'row',
 					content: [
 						{
@@ -86,7 +137,7 @@ module.exports = {
 							content: [
 								{
 									block: 'goods',
-									mix: [{ block: 'shadow', mods: { 2: true } }],
+									mods: { 'shadow': true },
 									content: [
 										{
 											elem: 'content',
@@ -161,7 +212,7 @@ module.exports = {
 							content: [
 								{
 									block: 'goods',
-									mix: [{ block: 'shadow', mods: { 2: true } }],
+									mods: { 'shadow': true },
 									content: [
 										{
 											elem: 'content',
@@ -236,7 +287,7 @@ module.exports = {
 							content: [
 								{
 									block: 'goods',
-									mix: [{ block: 'shadow', mods: { 2: true } }],
+									mods: { 'shadow': true },
 									content: [
 										{
 											elem: 'content',
@@ -311,7 +362,7 @@ module.exports = {
 							content: [
 								{
 									block: 'goods',
-									mix: [{ block: 'shadow', mods: { 2: true } }],
+									mods: { 'shadow': true },
 									content: [
 										{
 											elem: 'content',
@@ -386,7 +437,7 @@ module.exports = {
 							content: [
 								{
 									block: 'goods',
-									mix: [{ block: 'shadow', mods: { 2: true } }],
+									mods: { 'shadow': true },
 									content: [
 										{
 											elem: 'content',
@@ -461,7 +512,7 @@ module.exports = {
 							content: [
 								{
 									block: 'goods',
-									mix: [{ block: 'shadow', mods: { 2: true } }],
+									mods: { 'shadow': true },
 									content: [
 										{
 											elem: 'content',
@@ -536,7 +587,7 @@ module.exports = {
 							content: [
 								{
 									block: 'goods',
-									mix: [{ block: 'shadow', mods: { 2: true } }],
+									mods: { 'shadow': true },
 									content: [
 										{
 											elem: 'content',

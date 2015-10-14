@@ -1,12 +1,20 @@
 .sticky{
 	position: relative;
 }
+.sticky__panel{
+	overflow: hidden;
+}
 .sticky__backing{
 	display: none;
 	position: relative;
 }
 .sticky_fixed > .sticky__panel{
 	position: fixed;
+	top: 0;
+	width: 100%;
+	background: rgba(255, 255, 255, .9);
+	z-index: 10;
+	transition: all 0.2s ease 0.1s;	
 }
 .sticky_fixed  > .sticky__backing{
 	display: block;
