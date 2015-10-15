@@ -85,7 +85,7 @@ module.exports = {
 									content: [
 										{
 											block : 'button',
-											mods : { theme : 'ergo', size : 'm', view : 'action' },
+											mods : { theme : 'ergo', size : 'm'/* , view : 'action' */ },
 											text : 'Корзина',
 											icon: {
 												block: 'icon',
@@ -107,40 +107,99 @@ module.exports = {
 													/* content: 'Корзина пуска' */
 													content: [
 														{
-															block: 'goods',
-															mods: { 'incart': true },
+															elem: 'header',
 															content: [
 																{
-																	elem: 'content',
+																	block: 'link',
+																	mods: { theme : 'islands', size : 'l', pseudo : true },
+																	content: 'В корзине 2 товара &mdash; 20 000 руб.'
+																}
+															]
+														},
+														{
+															elem: 'list',
+															content: [
+																{
+																	block: 'goods',
+																	mods: { 'incart': true },
 																	content: [
 																		{
-																			elem: 'image',
+																			elem: 'content',
 																			content: [
 																				{
-																					block : 'image',
-																					url: 'https://yandex.ru/images/today?size=600x600',
-																					alt: ''												
-																				}
-																			]
-																		},
-																		{
-																			elem: 'text',
-																			content: [
-																				{
-																					elem: 'name',
-																					mods: { size: 'xl' },
+																					elem: 'image',
 																					content: [
-																						'Organic Navy'	
+																						{
+																							block : 'image',
+																							url: 'https://yandex.ru/images/today?size=600x600',
+																							alt: ''												
+																						}
 																					]
 																				},
 																				{
-																					elem: 'price',
-																					mods: { size: 'xl' },
+																					elem: 'text',
 																					content: [
-																						'10 000',
 																						{
-																							block: 'icon',
-																							cls: 'fa fa-rub'
+																							elem: 'name',
+																							mods: { size: 'xl' },
+																							content: [
+																								'Organic Navy'	
+																							]
+																						},
+																						{
+																							elem: 'price',
+																							mods: { size: 'xl' },
+																							content: [
+																								'10 000',
+																								{
+																									block: 'icon',
+																									cls: 'fa fa-rub'
+																								}
+																							]
+																						}
+																					]
+																				}
+																			]
+																		}
+																	]
+																},
+																{
+																	block: 'goods',
+																	mods: { 'incart': true },
+																	content: [
+																		{
+																			elem: 'content',
+																			content: [
+																				{
+																					elem: 'image',
+																					content: [
+																						{
+																							block : 'image',
+																							url: 'https://yandex.ru/images/today?size=600x600',
+																							alt: ''												
+																						}
+																					]
+																				},
+																				{
+																					elem: 'text',
+																					content: [
+																						{
+																							elem: 'name',
+																							mods: { size: 'xl' },
+																							content: [
+																								'Organic Quartz'	
+																							]
+																						},
+																						{
+																							elem: 'price',
+																							mods: { size: 'xl' },
+																							content: [
+																								'10 000',
+																								{
+																									block: 'icon',
+																									cls: 'fa fa-rub'
+																								}
+																							]
 																						}
 																					]
 																				}
@@ -151,46 +210,19 @@ module.exports = {
 															]
 														},
 														{
-															block: 'goods',
-															mods: { 'incart': true },
+															elem: 'footer',
 															content: [
 																{
-																	elem: 'content',
-																	content: [
-																		{
-																			elem: 'image',
-																			content: [
-																				{
-																					block : 'image',
-																					url: 'https://yandex.ru/images/today?size=600x600',
-																					alt: ''												
-																				}
-																			]
-																		},
-																		{
-																			elem: 'text',
-																			content: [
-																				{
-																					elem: 'name',
-																					mods: { size: 'xl' },
-																					content: [
-																						'Organic Quartz'	
-																					]
-																				},
-																				{
-																					elem: 'price',
-																					mods: { size: 'xl' },
-																					content: [
-																						'10 000',
-																						{
-																							block: 'icon',
-																							cls: 'fa fa-rub'
-																						}
-																					]
-																				}
-																			]
-																		}
-																	]
+																	block : 'button',
+																	mods : { theme : 'ergo', size : 'm', type : 'link'  },
+																	url : '#',
+																	text : 'Перейти в корзину'
+																},
+																{
+																	block : 'button',
+																	mods : { theme : 'ergo', size : 'm', type : 'link', view : 'action' },
+																	url : '#',
+																	text : 'Оформить заказ'
 																}
 															]
 														}

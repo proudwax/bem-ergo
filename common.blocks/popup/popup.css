@@ -28,10 +28,27 @@
 .popup__content {
     height: 100%;
     margin: 0;
-    padding: 4px 8px;
+    padding: 0;
     position: relative;
     z-index: 10;
 }
 .popup, .popup__content {
     box-sizing: border-box;
+}
+.popup__header{
+	padding: 15px 20px;
+	border-bottom: 1px solid #e9e9e9;
+}
+.popup__list{
+	margin: 0 10px;
+}
+.popup__footer{
+	padding: 15px 20px;
+	border-top: 1px solid #e9e9e9;
+}
+.popup__footer .button{
+	margin-right: 10px;
+}
+.popup__footer .button:last-child{
+	margin-right: 0;
 }

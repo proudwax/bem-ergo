@@ -70,17 +70,15 @@
 
 ctx = '.goods_incart'
 {ctx} {
-	width: 200px;
+	width: 100%;
 	height: 50px;
 	overflow: hidden;
 
 	&.goods{
 		padding: 0;
-		margin: .5rem;
+		margin: 10px 0;
 	}
 	&.goods:before{
-		content: "";
-		display: block;
 		padding-top: 0;
 	}
 	.goods__content{
@@ -100,10 +98,23 @@ ctx = '.goods_incart'
 		position: relative;
 		display: inline-block;
 		border: none;
-		margin-left: 10px;
+		margin: 0 10px;
 		padding: 0;
-		width: 140px;
+		width: calc(100% - 70px);
 		float: left;
+		overflow: hidden;
+	}
+	.goods__action{
+		line-height: 50px;
+		bottom: 0;
+		right: 0;
+	}
+	.goods__action .button{
+		opacity: 0.2;
+		transition: all 0.3s ease 0s;	
+	}
+	.goods__action .button_hovered{
+		opacity: 1;
 	}
 	.goods__name{
 		margin: 0;

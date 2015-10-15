@@ -30,7 +30,27 @@ block('goods')(
 				}
 			];
 		})
-	)
+	),
+	match(function(){ return this.mods.incart })(
+		elem('text').content()(function() {
+			return [
+				applyNext(),
+				{
+					elem: 'action',
+					content:[
+						{
+							block: 'button',
+							mods: { view : 'action', theme: 'ergo', size: 'm', view : 'plain' },
+							icon: {
+								block: 'icon',
+								cls: 'fa fa-trash-o'
+							}
+						}
+					]	
+				}
+			];
+		})
+	)	
 )
 
 
