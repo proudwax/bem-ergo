@@ -1,0 +1,36 @@
+block('goods')(
+	js()(true),
+	match(function(){ return this.mods.showcase })(
+		elem('text').content()(function() {
+			return [
+				applyNext(),
+				{
+					elem: 'action',
+					mix: [{ block : 'control-group' }], 
+					content:[
+						{
+							block: 'button',
+							mods: { theme: 'ergo', size: 'm' },
+							text: 'Подробнее',
+							icon: {
+								block: 'icon',
+								cls: 'fa fa-search-plus'
+							}
+						},
+						{
+							block: 'button',
+							mods: { view : 'action', theme: 'ergo', size: 'm' },
+							text: 'Купить',
+							icon: {
+								block: 'icon',
+								cls: 'fa fa-shopping-cart'
+							}
+						}
+					]	
+				}
+			];
+		})
+	)
+)
+
+

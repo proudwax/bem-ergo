@@ -96,15 +96,105 @@ module.exports = {
 										{
 											block : 'popup',
 											mods : { theme : 'islands', target : 'anchor', autoclosable : true },
-											mainOffset : 10,
-											directions : ['bottom-center'],
+											mainOffset : 13,
+											directions : ['bottom-right'],
 											content: [
 												{
 													elem: 'tail'
 												},
 												{
 													elem: 'content',
-													content: 'Корзина пуска'
+													/* content: 'Корзина пуска' */
+													content: [
+														{
+															block: 'goods',
+															mods: { 'incart': true },
+															content: [
+																{
+																	elem: 'content',
+																	content: [
+																		{
+																			elem: 'image',
+																			content: [
+																				{
+																					block : 'image',
+																					url: 'https://yandex.ru/images/today?size=600x600',
+																					alt: ''												
+																				}
+																			]
+																		},
+																		{
+																			elem: 'text',
+																			content: [
+																				{
+																					elem: 'name',
+																					mods: { size: 'xl' },
+																					content: [
+																						'Organic Navy'	
+																					]
+																				},
+																				{
+																					elem: 'price',
+																					mods: { size: 'xl' },
+																					content: [
+																						'10 000',
+																						{
+																							block: 'icon',
+																							cls: 'fa fa-rub'
+																						}
+																					]
+																				}
+																			]
+																		}
+																	]
+																}
+															]
+														},
+														{
+															block: 'goods',
+															mods: { 'incart': true },
+															content: [
+																{
+																	elem: 'content',
+																	content: [
+																		{
+																			elem: 'image',
+																			content: [
+																				{
+																					block : 'image',
+																					url: 'https://yandex.ru/images/today?size=600x600',
+																					alt: ''												
+																				}
+																			]
+																		},
+																		{
+																			elem: 'text',
+																			content: [
+																				{
+																					elem: 'name',
+																					mods: { size: 'xl' },
+																					content: [
+																						'Organic Quartz'	
+																					]
+																				},
+																				{
+																					elem: 'price',
+																					mods: { size: 'xl' },
+																					content: [
+																						'10 000',
+																						{
+																							block: 'icon',
+																							cls: 'fa fa-rub'
+																						}
+																					]
+																				}
+																			]
+																		}
+																	]
+																}
+															]
+														}
+													]
 												}
 											]
 										}
@@ -137,7 +227,7 @@ module.exports = {
 							content: [
 								{
 									block: 'goods',
-									mods: { 'shadow': true },
+									mods: { 'shadow': true, 'showcase': true },
 									content: [
 										{
 											elem: 'content',
@@ -172,30 +262,6 @@ module.exports = {
 																	cls: 'fa fa-rub'
 																}
 															]
-														},
-														{
-															elem: 'action',
-															mix: [{ block : 'control-group' }], 
-															content:[
-																{
-																	block: 'button',
-																	mods: { theme: 'ergo', size: 'm' },
-																	text: 'Подробнее',
-																	icon: {
-																		block: 'icon',
-																		cls: 'fa fa-search-plus'
-																	}
-																},
-																{
-																	block: 'button',
-																	mods: { view : 'action', theme: 'ergo', size: 'm' },
-																	text: 'Купить',
-																	icon: {
-																		block: 'icon',
-																		cls: 'fa fa-shopping-cart'
-																	}
-																}
-															]	
 														}
 													]
 												}
@@ -212,7 +278,7 @@ module.exports = {
 							content: [
 								{
 									block: 'goods',
-									mods: { 'shadow': true },
+									mods: { 'shadow': true, 'showcase': true },
 									content: [
 										{
 											elem: 'content',
@@ -247,30 +313,6 @@ module.exports = {
 																	cls: 'fa fa-rub'
 																}
 															]
-														},
-														{
-															elem: 'action',
-															mix: [{ block : 'control-group' }], 
-															content:[
-																{
-																	block: 'button',
-																	mods: { theme: 'ergo', size: 'm' },
-																	text: 'Подробнее',
-																	icon: {
-																		block: 'icon',
-																		cls: 'fa fa-search-plus'
-																	}
-																},
-																{
-																	block: 'button',
-																	mods: { view : 'action', theme: 'ergo', size: 'm' },
-																	text: 'Купить',
-																	icon: {
-																		block: 'icon',
-																		cls: 'fa fa-shopping-cart'
-																	}
-																}
-															]	
 														}
 													]
 												}
@@ -322,30 +364,6 @@ module.exports = {
 																	cls: 'fa fa-rub'
 																}
 															]
-														},
-														{
-															elem: 'action',
-															mix: [{ block : 'control-group' }], 
-															content:[
-																{
-																	block: 'button',
-																	mods: { theme: 'ergo', size: 'm' },
-																	text: 'Подробнее',
-																	icon: {
-																		block: 'icon',
-																		cls: 'fa fa-search-plus'
-																	}
-																},
-																{
-																	block: 'button',
-																	mods: { view : 'action', theme: 'ergo', size: 'm' },
-																	text: 'Купить',
-																	icon: {
-																		block: 'icon',
-																		cls: 'fa fa-shopping-cart'
-																	}
-																}
-															]	
 														}
 													]
 												}
@@ -397,30 +415,6 @@ module.exports = {
 																	cls: 'fa fa-rub'
 																}
 															]
-														},
-														{
-															elem: 'action',
-															mix: [{ block : 'control-group' }], 
-															content:[
-																{
-																	block: 'button',
-																	mods: { theme: 'ergo', size: 'm' },
-																	text: 'Подробнее',
-																	icon: {
-																		block: 'icon',
-																		cls: 'fa fa-search-plus'
-																	}
-																},
-																{
-																	block: 'button',
-																	mods: { view : 'action', theme: 'ergo', size: 'm' },
-																	text: 'Купить',
-																	icon: {
-																		block: 'icon',
-																		cls: 'fa fa-shopping-cart'
-																	}
-																}
-															]	
 														}
 													]
 												}
@@ -472,30 +466,6 @@ module.exports = {
 																	cls: 'fa fa-rub'
 																}
 															]
-														},
-														{
-															elem: 'action',
-															mix: [{ block : 'control-group' }], 
-															content:[
-																{
-																	block: 'button',
-																	mods: { theme: 'ergo', size: 'm' },
-																	text: 'Подробнее',
-																	icon: {
-																		block: 'icon',
-																		cls: 'fa fa-search-plus'
-																	}
-																},
-																{
-																	block: 'button',
-																	mods: { view : 'action', theme: 'ergo', size: 'm' },
-																	text: 'Купить',
-																	icon: {
-																		block: 'icon',
-																		cls: 'fa fa-shopping-cart'
-																	}
-																}
-															]	
 														}
 													]
 												}
@@ -547,30 +517,6 @@ module.exports = {
 																	cls: 'fa fa-rub'
 																}
 															]
-														},
-														{
-															elem: 'action',
-															mix: [{ block : 'control-group' }], 
-															content:[
-																{
-																	block: 'button',
-																	mods: { theme: 'ergo', size: 'm' },
-																	text: 'Подробнее',
-																	icon: {
-																		block: 'icon',
-																		cls: 'fa fa-search-plus'
-																	}
-																},
-																{
-																	block: 'button',
-																	mods: { view : 'action', theme: 'ergo', size: 'm' },
-																	text: 'Купить',
-																	icon: {
-																		block: 'icon',
-																		cls: 'fa fa-shopping-cart'
-																	}
-																}
-															]	
 														}
 													]
 												}
@@ -622,30 +568,6 @@ module.exports = {
 																	cls: 'fa fa-rub'
 																}
 															]
-														},
-														{
-															elem: 'action',
-															mix: [{ block : 'control-group' }], 
-															content:[
-																{
-																	block: 'button',
-																	mods: { theme: 'ergo', size: 'm' },
-																	text: 'Подробнее',
-																	icon: {
-																		block: 'icon',
-																		cls: 'fa fa-search-plus'
-																	}
-																},
-																{
-																	block: 'button',
-																	mods: { view : 'action', theme: 'ergo', size: 'm' },
-																	text: 'Купить',
-																	icon: {
-																		block: 'icon',
-																		cls: 'fa fa-shopping-cart'
-																	}
-																}
-															]	
 														}
 													]
 												}
