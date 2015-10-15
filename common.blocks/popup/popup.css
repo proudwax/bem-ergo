@@ -11,7 +11,7 @@
 }
 .popup__tail {
     margin-left: calc(50% - 8px);
-    top: -10px;
+    top: -8px;
     transform: rotate(135deg);
 }
 .popup__tail {
