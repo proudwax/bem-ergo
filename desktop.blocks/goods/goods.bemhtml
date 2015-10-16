@@ -1,6 +1,6 @@
 block('goods')(
-	js()(true),
 	match(function(){ return this.mods.showcase })(
+		js()(true),
 		elem('text').content()(function() {
 			return [
 				applyNext(),
@@ -19,7 +19,7 @@ block('goods')(
 						},
 						{
 							block: 'button',
-							mods: { view : 'action', theme: 'ergo', size: 'm' },
+							mods: { view : 'action', theme: 'ergo', size: 'm', add: true },
 							text: 'Купить',
 							icon: {
 								block: 'icon',
@@ -32,6 +32,7 @@ block('goods')(
 		})
 	),
 	match(function(){ return this.mods.incart })(
+		js()(true),
 		elem('text').content()(function() {
 			return [
 				applyNext(),

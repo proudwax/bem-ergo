@@ -111,7 +111,7 @@ module.exports = {
 															content: [
 																{
 																	block: 'link',
-																	mods: { theme : 'islands', size : 'l', pseudo : true },
+																	mods: { theme : 'ergo', size : 'l', pseudo : true },
 																	content: 'В корзине 2 товара &mdash; 20 000 руб.'
 																}
 															]
@@ -141,14 +141,16 @@ module.exports = {
 																					content: [
 																						{
 																							elem: 'name',
-																							mods: { size: 'xl' },
 																							content: [
-																								'Organic Navy'	
+																								{
+																									block: 'link',
+																									mods: { theme : 'ergo', size : 'm', pseudo : true },
+																									content: 'Organic Navy'
+																								}
 																							]
 																						},
 																						{
 																							elem: 'price',
-																							mods: { size: 'xl' },
 																							content: [
 																								'10 000',
 																								{
@@ -187,7 +189,11 @@ module.exports = {
 																							elem: 'name',
 																							mods: { size: 'xl' },
 																							content: [
-																								'Organic Quartz'	
+																								{
+																									block: 'link',
+																									mods: { theme : 'ergo', size : 'm', pseudo : true },
+																									content: 'Organic Quartz'
+																								}
 																							]
 																						},
 																						{
@@ -259,6 +265,7 @@ module.exports = {
 							content: [
 								{
 									block: 'goods',
+									/* js: { id: 1, cost: 10000, name: 'Organic Navy'}, */
 									mods: { 'shadow': true, 'showcase': true },
 									content: [
 										{
@@ -281,7 +288,13 @@ module.exports = {
 															elem: 'name',
 															mods: { size: 'xl' },
 															content: [
-																'Organic Navy'	
+																{
+																	block: 'link',
+																	mods: { theme: 'ergo' },
+																	content: [
+																		'Organic Navy'	
+																	]
+																}
 															]
 														},
 														{
@@ -332,7 +345,13 @@ module.exports = {
 															elem: 'name',
 															mods: { size: 'xl' },
 															content: [
-																'Organic Bundle of Joy - Navy'	
+																{
+																	block: 'link',
+																	mods: { theme: 'ergo' },
+																	content: [
+																		'Organic Bundle of Joy - Navy'	
+																	]
+																}															
 															]
 														},
 														{

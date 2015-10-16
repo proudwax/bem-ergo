@@ -12,7 +12,7 @@ provide(BEMDOM.decl(this.name, {
 				
                 link.on('click', function() {
                     popup.setMod('visible', true);
-                });
+                });		
             }
         }
     }
