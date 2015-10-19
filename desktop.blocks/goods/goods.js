@@ -1,4 +1,4 @@
-modules.define('goods', ['i-bem__dom'], function(provide, BEMDOM) {
+modules.define('goods', ['i-bem__dom', 'jquery'], function(provide, BEMDOM, $) {
 
 provide(BEMDOM.decl(this.name, {
     onSetMod : {
@@ -14,13 +14,32 @@ provide(BEMDOM.decl(this.name, {
 		
 		'js': {
 			'inited': function(){
-				/* var add = this.getElemMod('button', 'add', true); */
-				var add = this.findBlocksInside('button');
-				console.log(add);
+				var add = this.findBlockInside({ block :'button', modName : 'add', modVal : true }),
+					more = this.findBlockInside({ block :'button', modName : 'more', modVal : true }),			
+					_this = this;
+				
+				if(more){ // Проверка на присутствие кнопки MORE
+					more.bindTo('click', function(){
+						_this._moreAjax('/' + _this.params.id + '.json');
+					});
+				}
 			}
 		}
     },
-
+	
+	_moreAjax: function(url){
+		$.ajax({
+			url: url,
+		})
+		.done(function(msg) {
+			console.log(msg);
+		});
+	},	
+	
+	_createModal: function(){
+		
+	},
+	
     _onMouseOver: function(){
         this.setMod('hovered');
     },

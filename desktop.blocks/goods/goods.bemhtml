@@ -10,7 +10,7 @@ block('goods')(
 					content:[
 						{
 							block: 'button',
-							mods: { theme: 'ergo', size: 'm' },
+							mods: { theme: 'ergo', size: 'm', more: true },
 							text: 'Подробнее',
 							icon: {
 								block: 'icon',

@@ -1,5 +1,5 @@
-modules.define('sticky', ['i-bem__dom', 'jquery', 'BEMHTML'],
-function(provide, BEMDOM, $, BEMHTML) {
+modules.define('sticky', ['i-bem__dom', 'jquery', 'BEMHTML', 'functions__throttle'],
+function(provide, BEMDOM, $, BEMHTML, throttle) {
 
 
 provide(BEMDOM.decl(this.name, {
@@ -14,7 +14,7 @@ provide(BEMDOM.decl(this.name, {
 				this.setMod(this.elem('panel'), 'shadow', BEMDOM.win.scrollTop() >= sticky_top);
 				
 				this._scrollWin();
-				this._resizeWin();
+				throttle(this._resizeWin(), 500);
             }
         }
 	},

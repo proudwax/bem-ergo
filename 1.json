@@ -1,0 +1,19 @@
+{
+    "name": "Organic Navy",
+    "cost": 10000,
+    "description": "Organic Navy Organic Navy Organic Navy Organic Navy",
+    "images": {
+        "img_1": {
+            "url": "https://yandex.ru/images/today?size=1920x800",
+            "alt": "1"
+        },
+        "img_2": {
+            "url": "https://yandex.ru/images/today?size=1920x800",
+            "alt": "2"
+        },
+        "img_3": {
+            "url": "https://yandex.ru/images/today?size=1920x800",
+            "alt": "3"
+        }
+    }
+}

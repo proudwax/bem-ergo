@@ -265,7 +265,7 @@ module.exports = {
 							content: [
 								{
 									block: 'goods',
-									/* js: { id: 1, cost: 10000, name: 'Organic Navy'}, */
+									js: { id: 1/* , cost: 10000, name: 'Organic Navy' */},
 									mods: { 'shadow': true, 'showcase': true },
 									content: [
 										{
@@ -323,6 +323,7 @@ module.exports = {
 							content: [
 								{
 									block: 'goods',
+									js: { id: 2/* , cost: 10000, name: 'Organic Bundle of Joy - Navy' */},
 									mods: { 'shadow': true, 'showcase': true },
 									content: [
 										{
