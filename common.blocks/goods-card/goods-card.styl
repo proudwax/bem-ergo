@@ -1,0 +1,15 @@
+.goods-card{
+	width: 50%;
+	position: fixed;
+	top: 0;
+	right: -50%;
+	overflow-y: auto; 
+	overflow-x: hidden; 
+	height: 100%;
+	z-index: 20;
+	transition: right .3s ease .1s;
+}
+
+.page__container_goods-card_visible .goods-card{
+	right: 0;
+}
