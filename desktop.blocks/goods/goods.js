@@ -28,6 +28,7 @@ provide(BEMDOM.decl(this.name, {
     },
 	
 	_moreAjax: function(url){
+
 		/* $.ajax({
 			url: url,
 		})
@@ -40,7 +41,7 @@ provide(BEMDOM.decl(this.name, {
             .then(function(){
                 /* BEMDOM.append(_this.domElem, BEMTHML.apply(bemjson)); */
 				BEMDOM.append(_this.domElem, BEMHTML.apply({ block: 'input', content: 'olololo' }))
-            });		
+            });	
 	},	
 	
 	_createModal: function(){
