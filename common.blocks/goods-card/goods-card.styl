@@ -8,8 +8,97 @@
 	height: 100%;
 	z-index: 20;
 	transition: right .3s ease .1s;
+	border-left: 2px solid #dfdfdf;
+	background-color: #fff;
+	display: flex;
+}
+.goods-card__close{
+	position: absolute;
+	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADcAAAAjBAMAAADCso/4AAAAGFBMVEUAAADQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NCwP/4LAAAAB3RSTlMA2hMVFngykdziUgAAADdJREFUKM9jIBEEGuCRFBfGI+lYiEcry6hWemgtxw3wS+IETOJCuCUVCxVGNdJVIwM+jQyJcI0A0GYn62SdpWoAAAAASUVORK5CYII=');
+	background-color: #fff;
+	background-repeat: no-repeat;
+	width: 55px;
+	height: 35px;
+	right: 25px;
+	top: 25px;
+	cursor: pointer;
+}
+.goods-card__wrapper{
+	max-width: 600px;
+	min-height: 500px;
+	margin: 0 auto;
+	align-self: center;
+}
+.goods-card__title{
+    font-size: 35px;
+    line-height: 1.3em;
+	font-weight: 300;
+}
+.goods-card__content{
+    box-sizing: border-box;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+.goods-card__text{
+	position: relative;
+	margin: .5rem 0;
+}
+.goods-card__price{
+    font-size: 30px;
+    line-height: 32px;
+	font-weight: 300;
+	width: 50%;
+	display: inline-block;
+}
+.goods-card__price .fa-rub {
+    font-size: 18px;
+    padding-left: 3px;
+	font-weight: 300;	
+}
+.goods-card__action{
+	margin-top: 10px;
+}
+.goods-card__list{
+	width: 50%;
+	display: inline-block;
 }
 
-.page__container_goods-card_visible .goods-card{
-	right: 0;
+
+ctx = '.page__container_goods-card_visible'
+{ctx} {
+	.goods-card{
+		right: 0;
+	}
+
+	@media only screen and (min-width: 48em) {
+		.col-sm-6  {
+			-ms-flex-preferred-size: 100%;
+			-webkit-flex-basis: 100%;
+			flex-basis: 100%;
+			max-width: 100%;
+		}	
+	}
+	@media only screen and (min-width: 62em) {
+		.col-md-4  {
+			-ms-flex-preferred-size: 100%;
+			-webkit-flex-basis: 100%;
+			flex-basis: 100%;
+			max-width: 100%;
+		}
+	}
+	@media only screen and (min-width: 75em) {
+		.col-lg-3 {
+			-ms-flex-preferred-size: 50%;
+			-webkit-flex-basis: 50%;
+			flex-basis: 50%;
+			max-width: 50%;
+		}
+		.col-lg-9{
+			-ms-flex-preferred-size: 50%;
+			-webkit-flex-basis: 50%;
+			flex-basis: 50%;
+			max-width: 50%;		
+		}
+	}
+	
 }

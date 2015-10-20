@@ -12,10 +12,10 @@ provide(BEMDOM.decl(this.name, {
 	onSetMod : {
 		'js': {
             'inited': function() {
-				swiper = new Swiper('.swiper-container', {
-					nextButton: '.swiper-button-next',
-					prevButton: '.swiper-button-prev',
-					pagination: '.swiper-pagination',
+				var swiper = new Swiper('.section .swiper-container', {
+					nextButton: '.section .swiper-button-next',
+					prevButton: '.section .swiper-button-prev',
+					pagination: '.section .swiper-pagination',
 					paginationClickable: true,
 					spaceBetween: 0,
 					loop: true

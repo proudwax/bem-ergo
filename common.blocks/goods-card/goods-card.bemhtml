@@ -1,57 +1,31 @@
-block('goods')(
-	match(function(){ return this.mods.showcase })(
-		js()(true),
-		elem('text').content()(function() {
-			return [
-				applyNext(),
-				{
-					elem: 'action',
-					mix: [{ block : 'control-group' }], 
-					content:[
-						{
-							block: 'button',
-							mods: { theme: 'ergo', size: 'm', more: true },
-							text: 'Подробнее',
-							icon: {
-								block: 'icon',
-								cls: 'fa fa-search-plus'
-							}
-						},
-						{
-							block: 'button',
-							mods: { view : 'action', theme: 'ergo', size: 'm', add: true },
-							text: 'Купить',
-							icon: {
-								block: 'icon',
-								cls: 'fa fa-shopping-cart'
-							}
+block('goods-card')(
+	js()(true),
+	content()(function(){
+		return [
+			{
+				elem: 'close'
+			},
+			applyNext()
+		]
+	}),
+	elem('title').tag()('h1'),
+	elem('price').content()(function(){
+		return [
+			applyNext(),
+			{
+				elem: 'action',
+				content:[
+					{
+						block: 'button',
+						mods: { view : 'action', theme: 'ergo', size: 'l', add: true },
+						text: 'Купить',
+						icon: {
+							block: 'icon',
+							cls: 'fa fa-shopping-cart'
 						}
-					]	
-				}
-			];
-		})
-	),
-	match(function(){ return this.mods.incart })(
-		js()(true),
-		elem('text').content()(function() {
-			return [
-				applyNext(),
-				{
-					elem: 'action',
-					content:[
-						{
-							block: 'button',
-							mods: { view : 'action', theme: 'ergo', size: 'm', view : 'plain' },
-							icon: {
-								block: 'icon',
-								cls: 'fa fa-trash-o'
-							}
-						}
-					]	
-				}
-			];
-		})
-	)	
+					}
+				]	
+			}
+		];
+	})
 )
-
-

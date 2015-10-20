@@ -274,7 +274,7 @@ module.exports = {
 							content: [
 								{
 									elem: 'item',
-									cls: 'col-sm-12 col-md-6 col-lg-4',
+									cls: 'col-xs-12 col-sm-6 col-md-4 col-lg-3',
 									js: { filter: 2 },
 									content: [
 										{
@@ -332,7 +332,7 @@ module.exports = {
 								},
 								{
 									elem: 'item',
-									cls: 'col-sm-12 col-md-6 col-lg-4',
+									cls: 'col-xs-12 col-sm-6 col-md-4 col-lg-3',
 									js: { filter: 2 },
 									content: [
 										{
@@ -390,7 +390,7 @@ module.exports = {
 								},
 								{
 									elem: 'item',
-									cls: 'col-sm-12 col-md-6 col-lg-4',
+									cls: 'col-xs-12 col-sm-6 col-md-4 col-lg-3',
 									js: { filter: 3 },
 									content: [
 										{
@@ -441,7 +441,7 @@ module.exports = {
 								},
 								{
 									elem: 'item',
-									cls: 'col-sm-12 col-md-6 col-lg-4',
+									cls: 'col-xs-12 col-sm-6 col-md-4 col-lg-3',
 									js: { filter: 4 },
 									content: [
 										{
@@ -492,7 +492,7 @@ module.exports = {
 								},
 								{
 									elem: 'item',
-									cls: 'col-sm-12 col-md-6 col-lg-4',
+									cls: 'col-xs-12 col-sm-6 col-md-4 col-lg-3',
 									js: { filter: 4 },
 									content: [
 										{
@@ -543,7 +543,7 @@ module.exports = {
 								},
 								{
 									elem: 'item',
-									cls: 'col-sm-12 col-md-6 col-lg-4',
+									cls: 'col-xs-12 col-sm-6 col-md-4 col-lg-3',
 									js: { filter: 4 },
 									content: [
 										{
@@ -594,7 +594,7 @@ module.exports = {
 								},
 								{
 									elem: 'item',
-									cls: 'col-sm-12 col-md-6 col-lg-4',
+									cls: 'col-xs-12 col-sm-6 col-md-4 col-lg-3',
 									js: { filter: 4 },
 									content: [
 										{
@@ -648,39 +648,97 @@ module.exports = {
 					]
 				},
 				{
+					block: 'section',
+					content: [		
+						{
+							block : 'image',
+							url : 'https://yandex.ru/images/today?size=1920x800',
+							title : 'Все подробности на bem.info',
+							width : '100%'
+						}
+					]
+				},				
+				{
 					block: 'goods-card',
 					content: [
 						{
-							elem: 'content',
+							elem: 'wrapper',
 							content: [
 								{
-									elem: 'image',
+									elem: 'content',
 									content: [
 										{
-											block : 'image',
-											url: 'https://yandex.ru/images/today?size=600x600',
-											alt: ''												
-										}
-									]
-								},
-								{
-									elem: 'text',
-									content: [
+											elem: 'title',
+											content: 'Organic Dark Cocoa'
+										},
 										{
-											elem: 'name',
-											mods: { size: 'xl' },
+											elem: 'swiper',
 											content: [
-												'Organic Dark Cocoa'	
+												{
+													block: 'swiper',
+													cls: 'goods-card-swiper',
+													content: [
+														{
+															elem: 'slide',
+															bg: 'https://yandex.ru/images/today?size=600x600',
+														},
+														{
+															elem: 'slide',
+															bg: 'https://yandex.ru/images/today?size=600x600',
+														},
+														{
+															elem: 'slide',
+															bg: 'https://yandex.ru/images/today?size=600x600',
+														},	
+														{
+															elem: 'button',
+															elemMods: { 'prev': true, 'theme': 'ergo' }
+														},	
+														{
+															elem: 'button',
+															elemMods: { 'next': true, 'theme': 'ergo' }
+														},	
+														{
+															elem: 'pagination'
+														}
+													]
+												}	
 											]
 										},
 										{
-											elem: 'price',
-											mods: { size: 'xl' },
+											elem: 'text',
 											content: [
-												'10 000',
 												{
-													block: 'icon',
-													cls: 'fa fa-rub'
+													elem: 'price',
+													content: [
+														'10 000',
+														{
+															block: 'icon',
+															cls: 'fa fa-rub'
+														}
+													]
+												},
+												{
+													elem: 'list',
+													content: [
+														{
+															block: 'list',
+															content: [
+																{
+																	elem: 'item',
+																	content: 'Назначение — городской'
+																},
+																{
+																	elem: 'item',
+																	content: 'Тип — унисекс'
+																},
+																{
+																	elem: 'item',
+																	content: 'Тип конструкции — мягкий'
+																}
+															]
+														}
+													]
 												}
 											]
 										}
@@ -710,18 +768,7 @@ module.exports = {
 						
 					
 					
-				},
-				{
-					block: 'section',
-					content: [		
-						{
-							block : 'image',
-							url : 'https://yandex.ru/images/today?size=1920x800',
-							title : 'Все подробности на bem.info',
-							width : '100%'
-						}
-					]
-				}	
+				}
 			]
 		}
     ]
