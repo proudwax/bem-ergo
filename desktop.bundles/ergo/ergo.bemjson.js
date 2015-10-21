@@ -1,6 +1,5 @@
 module.exports = {
     block: 'page',
-	/* mix: [{ js: true }], */
     title: 'ergo',
     head: [
         { elem : 'meta', attrs : { name : 'description', content : '' } },
@@ -9,10 +8,10 @@ module.exports = {
     ],
     scripts: [{ elem: 'js', url: 'ergo.min.js' }],
 	mods: { theme: 'ergo'},
+	js: true,
     content: [ 
 		{
 			elem: 'container',
-			mods: { 'goods-card': 'visible' },
 			content: [
 				{
 					block: 'section',
@@ -67,7 +66,7 @@ module.exports = {
 								{
 									elem: 'item',
 									mix: [{ block: 'filter', js: true }],
-									cls: 'col-xs-9 col-sm-9 col-md-9 col-lg-9',
+									cls: 'col-xs-6 col-sm-9 col-md-9 col-lg-9',
 									content: [
 										{
 											block: 'radio-group',
@@ -81,12 +80,25 @@ module.exports = {
 												{ val: 3, text : 'Performance' },
 												{ val: 4, text : 'Four Position 360' }
 											]
+										},
+										{
+											block : 'select',
+											mix: [{ block: 'filter', elem: 'group' }],
+											mods : { mode : 'radio', theme : 'islands', size : 'm' },
+											name: 'radio',
+											val : '',
+											options : [
+												{ val: '', text : 'Все' },
+												{ val: 2, text : 'Original' },
+												{ val: 3, text : 'Performance' },
+												{ val: 4, text : 'Four Position 360' }
+											]
 										}
 									]
 								},
 								{
 									elem: 'item',
-									cls: 'col-xs-3 col-sm-3 col-md-3 col-lg-3',
+									cls: 'col-xs-6 col-sm-3 col-md-3 col-lg-3',
 									content: [
 										{
 											block: 'cart',
@@ -314,13 +326,7 @@ module.exports = {
 																{
 																	elem: 'price',
 																	mods: { size: 'xl' },
-																	content: [
-																		'10 000',
-																		{
-																			block: 'icon',
-																			cls: 'fa fa-rub'
-																		}
-																	]
+																	content: 10000
 																}
 															]
 														}
@@ -372,13 +378,7 @@ module.exports = {
 																{
 																	elem: 'price',
 																	mods: { size: 'xl' },
-																	content: [
-																		'10 000',
-																		{
-																			block: 'icon',
-																			cls: 'fa fa-rub'
-																		}
-																	]
+																	content: 10000
 																}
 															]
 														}
@@ -423,13 +423,7 @@ module.exports = {
 																{
 																	elem: 'price',
 																	mods: { size: 'xl' },
-																	content: [
-																		'10 000',
-																		{
-																			block: 'icon',
-																			cls: 'fa fa-rub'
-																		}
-																	]
+																	content: 10000
 																}
 															]
 														}
@@ -474,13 +468,7 @@ module.exports = {
 																{
 																	elem: 'price',
 																	mods: { size: 'xl' },
-																	content: [
-																		'10 000',
-																		{
-																			block: 'icon',
-																			cls: 'fa fa-rub'
-																		}
-																	]
+																	content: 10000
 																}
 															]
 														}
@@ -525,13 +513,7 @@ module.exports = {
 																{
 																	elem: 'price',
 																	mods: { size: 'xl' },
-																	content: [
-																		'10 000',
-																		{
-																			block: 'icon',
-																			cls: 'fa fa-rub'
-																		}
-																	]
+																	content: 10000
 																}
 															]
 														}
@@ -576,13 +558,7 @@ module.exports = {
 																{
 																	elem: 'price',
 																	mods: { size: 'xl' },
-																	content: [
-																		'10 000',
-																		{
-																			block: 'icon',
-																			cls: 'fa fa-rub'
-																		}
-																	]
+																	content: 10000
 																}
 															]
 														}
@@ -627,13 +603,7 @@ module.exports = {
 																{
 																	elem: 'price',
 																	mods: { size: 'xl' },
-																	content: [
-																		'10 000',
-																		{
-																			block: 'icon',
-																			cls: 'fa fa-rub'
-																		}
-																	]
+																	content: 10000
 																}
 															]
 														}
@@ -710,13 +680,7 @@ module.exports = {
 											content: [
 												{
 													elem: 'price',
-													content: [
-														'10 000',
-														{
-															block: 'icon',
-															cls: 'fa fa-rub'
-														}
-													]
+													content: '10 000'
 												},
 												{
 													elem: 'list',
@@ -747,27 +711,6 @@ module.exports = {
 							]
 						}
 					]
-					
-					
-		/*     "name": "Organic Navy",
-			"cost": 10000,
-			"description": "Organic Navy Organic Navy Organic Navy Organic Navy",
-			"images": {
-				"img_1": {
-					"url": "https://yandex.ru/images/today?size=1920x800",
-					"alt": "1"
-				},
-				"img_2": {
-					"url": "https://yandex.ru/images/today?size=1920x800",
-					"alt": "2"
-				},
-				"img_3": {
-					"url": "https://yandex.ru/images/today?size=1920x800",
-					"alt": "3"
-				} */
-						
-					
-					
 				}
 			]
 		}

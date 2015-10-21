@@ -1,4 +1,4 @@
-modules.define('goods', ['i-bem__dom', 'jquery', 'BEMHTML'], function(provide, BEMDOM, $, BEMHTML) {
+modules.define('goods', ['i-bem__dom', 'jquery', 'events__channels', 'BEMHTML'], function(provide, BEMDOM, $, channels, BEMHTML) {
 
 provide(BEMDOM.decl(this.name, {
     onSetMod : {
@@ -22,7 +22,11 @@ provide(BEMDOM.decl(this.name, {
 					more.bindTo('click', function(){
 						_this._moreAjax('/' + _this.params.id + '.json');
 					});
+					more.on('click', function(e){
+						channels('goods-card__visible').emit('click', 'visible');
+					});
 				}
+				
 			}
 		}
     },
@@ -35,13 +39,13 @@ provide(BEMDOM.decl(this.name, {
 		.done(function(msg) {
 			console.log(msg);
 		}); */
-		var _this = this;
+        /* BEMDOM.append(_this.domElem, BEMTHML.apply(bemjson)); */
+		/* var _this = this;
 		
 		$.get(url)
             .then(function(){
-                /* BEMDOM.append(_this.domElem, BEMTHML.apply(bemjson)); */
 				BEMDOM.append(_this.domElem, BEMHTML.apply({ block: 'input', content: 'olololo' }))
-            });	
+            });	 */
 	},	
 	
 	_createModal: function(){

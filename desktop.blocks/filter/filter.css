@@ -2,10 +2,16 @@
 
 }
 .filter__group{
-	display: inline-block;
+	display: none !important;
 	position: relative;
 	left: 50%;
 	-webkit-transform: translateX(-50%);
 	-ms-transform: translateX(-50%);
 	transform: translateX(-50%);
+}
+.filter__group.radio-group_visible{
+	display: inline-block !important;
+}
+.filter__group.select_visible{
+	display: inline-block !important;
 }

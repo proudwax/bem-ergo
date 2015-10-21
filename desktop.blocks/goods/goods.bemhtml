@@ -1,4 +1,13 @@
 block('goods')(
+	elem('price').content()(function(){
+			return [
+				applyNext(),
+				{
+					block: 'icon',
+					cls: 'fa fa-rub'
+				}
+			]
+	}),
 	match(function(){ return this.mods.showcase })(
 		js()(true),
 		elem('text').content()(function() {

@@ -1,4 +1,4 @@
-modules.define('goods-list', ['i-bem__dom', 'jquery', 'events__channels'], function(provide, BEMDOM, $, channels) {
+modules.define('goods-list', ['i-bem__dom', 'jquery', 'events__channels', 'functions__throttle'], function(provide, BEMDOM, $, channels, throttle) {
 
 provide(BEMDOM.decl(this.name, {
 	onSetMod : {
@@ -9,7 +9,7 @@ provide(BEMDOM.decl(this.name, {
 				this._redraw();
 
 				// следует использовать https://ru.bem.info/libs/bem-core/v2.8.0/desktop/functions/#elems-throttle чтобы не дергать коллбек слишком часто
-				this.bindToWin('resize', this._redraw);
+				this.bindToWin('resize', throttle(this._redraw, 300));
 
 				// подробнее про channels см. https://ru.bem.info/libs/bem-core/v2.8.0/desktop/events/#Элемент-channels-блока-events-1
 				channels('filter').on('change', function(e, val) {
@@ -17,6 +17,9 @@ provide(BEMDOM.decl(this.name, {
 						var item = $(this);
 						_this.setMod(item, 'hidden', val === '' ? false : _this.elemParams(item).filter != val);
 					});
+				});
+				channels('goods-card__close').on('click', function(e, val){
+					_this._redraw();
 				});
             }
         }

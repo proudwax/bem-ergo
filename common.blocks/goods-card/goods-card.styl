@@ -10,12 +10,10 @@
 	transition: right .3s ease .1s;
 	border-left: 2px solid #dfdfdf;
 	background-color: #fff;
-	display: flex;
 }
 .goods-card__close{
 	position: absolute;
 	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADcAAAAjBAMAAADCso/4AAAAGFBMVEUAAADQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NCwP/4LAAAAB3RSTlMA2hMVFngykdziUgAAADdJREFUKM9jIBEEGuCRFBfGI+lYiEcry6hWemgtxw3wS+IETOJCuCUVCxVGNdJVIwM+jQyJcI0A0GYn62SdpWoAAAAASUVORK5CYII=');
-	background-color: #fff;
 	background-repeat: no-repeat;
 	width: 55px;
 	height: 35px;
@@ -27,7 +25,8 @@
 	max-width: 600px;
 	min-height: 500px;
 	margin: 0 auto;
-	align-self: center;
+	/* align-self: center; */
+	/* position: absolute; */
 }
 .goods-card__title{
     font-size: 35px;
@@ -38,6 +37,8 @@
     box-sizing: border-box;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+	padding-top: 60px;
+	padding-bottom: 60px;
 }
 .goods-card__text{
 	position: relative;
@@ -49,6 +50,7 @@
 	font-weight: 300;
 	width: 50%;
 	display: inline-block;
+	vertical-align: top;	
 }
 .goods-card__price .fa-rub {
     font-size: 18px;
@@ -61,8 +63,15 @@
 .goods-card__list{
 	width: 50%;
 	display: inline-block;
+	vertical-align: top;
 }
-
+@media screen and (orientation: portrait) { 
+	.goods-card{
+		width: 100%;
+		right: -100%;
+		border-left-width: 0;
+	}
+}
 
 ctx = '.page__container_goods-card_visible'
 {ctx} {

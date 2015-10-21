@@ -6,7 +6,7 @@ modules.define('swiper_lib', function(provide) {
 });
 
 /* modules.define('swiper', ['swiper_lib'], function(provide, swiper_lib) { */
-modules.define('swiper', ['i-bem__dom', 'swiper_lib'], function(provide, BEMDOM, swiper_lib) {
+modules.define('swiper', ['i-bem__dom', 'events__channels', 'swiper_lib'], function(provide, BEMDOM, channels, swiper_lib) {
 
 provide(BEMDOM.decl(this.name, {
 	onSetMod : {
@@ -19,6 +19,9 @@ provide(BEMDOM.decl(this.name, {
 					paginationClickable: true,
 					spaceBetween: 0,
 					loop: true
+				});
+				channels('goods-card__close').on('click', function(e, val){
+					swiper.onResize();
 				});
 				/* console.log(swiper); */
             }

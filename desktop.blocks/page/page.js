@@ -12,8 +12,12 @@ provide(BEMDOM.decl(this.name, {
 		'js': {
             'inited': function() {
 				/* console.log(Modernizr); */
-				channels('card-close').emit('click', function(){
-					this.setMod('container', 'goods-card', false);
+				var _this = this;
+				channels('goods-card__close').on('click', function(e, val){
+					_this.setMod(_this.elem('container'), 'goods-card', val);
+				});
+				channels('goods-card__visible').on('click', function(e, val){
+					_this.setMod(_this.elem('container'), 'goods-card', val);
 				});
             }
         }

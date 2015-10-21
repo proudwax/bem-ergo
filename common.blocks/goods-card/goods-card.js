@@ -20,14 +20,10 @@ provide(BEMDOM.decl(this.name, {
 					spaceBetween: 0,
 					loop: true
 				});
-
-				/* this.bindTo(this.elem('close'), 'click', function(){
-					this.setMod(this.findBlockOutside('page').elem('container'), 'goods-card', 're'); 
-				}); */
 				
-				channels('card-close').on('click', function(e, val) {
-					console.log(this);
-				});
+				this.elem('close').on('click', function(e){
+                    channels('goods-card__close').emit('click', false);
+                });
             }
         }
 	},

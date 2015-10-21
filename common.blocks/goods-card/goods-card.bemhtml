@@ -13,6 +13,10 @@ block('goods-card')(
 		return [
 			applyNext(),
 			{
+				block: 'icon',
+				cls: 'fa fa-rub'
+			},
+			{
 				elem: 'action',
 				content:[
 					{
