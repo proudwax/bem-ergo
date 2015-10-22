@@ -1,10 +1,9 @@
 ({
 	tech: 'js',
-	shouldDeps: [
-        { block: 'swiper' }
-    ],
     mustDeps: [
-		{ elem : 'button', elem: 'slide' },
-		{ tech: 'bemhtml', block: 'input' }
-	]
+        {
+            block: 'goods-card',
+            tech: 'bemhtml'
+        }
+    ]
 })

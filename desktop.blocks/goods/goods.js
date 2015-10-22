@@ -40,12 +40,12 @@ provide(BEMDOM.decl(this.name, {
 			console.log(msg);
 		}); */
         /* BEMDOM.append(_this.domElem, BEMTHML.apply(bemjson)); */
-		/* var _this = this;
+		var _this = this;
 		
 		$.get(url)
-            .then(function(){
-				BEMDOM.append(_this.domElem, BEMHTML.apply({ block: 'input', content: 'olololo' }))
-            });	 */
+            .then(function(data){
+				BEMDOM.scope.append(BEMHTML.apply({ block: 'goods-card', content: data }))
+            });
 	},	
 	
 	_createModal: function(){

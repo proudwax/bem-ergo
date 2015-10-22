@@ -5,7 +5,10 @@ block('goods-card')(
 			{
 				elem: 'close'
 			},
-			applyNext()
+			{
+				elem: 'wrapper',
+				content: applyNext()
+			}
 		]
 	}),
 	elem('title').tag()('h1'),
@@ -22,7 +25,7 @@ block('goods-card')(
 					{
 						block: 'button',
 						mods: { view : 'action', theme: 'ergo', size: 'l', add: true },
-						text: 'Купить',
+						text: 'В корзину',
 						icon: {
 							block: 'icon',
 							cls: 'fa fa-shopping-cart'

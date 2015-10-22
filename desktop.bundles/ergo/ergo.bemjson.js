@@ -66,7 +66,7 @@ module.exports = {
 								{
 									elem: 'item',
 									mix: [{ block: 'filter', js: true }],
-									cls: 'col-xs-6 col-sm-8 col-md-9 col-lg-9',
+									cls: 'col-xs-6 col-sm-8 col-md-9 col-lg-8',
 									content: [
 										{
 											block: 'radio-group',
@@ -98,7 +98,7 @@ module.exports = {
 								},
 								{
 									elem: 'item',
-									cls: 'col-xs-6 col-sm-4 col-md-3 col-lg-3',
+									cls: 'col-xs-6 col-sm-4 col-md-3 col-lg-4',
 									content: [
 										{
 											block: 'cart',
@@ -106,7 +106,7 @@ module.exports = {
 											content: [
 												{
 													block : 'button',
-													mods : { theme : 'ergo', size : 'm'/* , view : 'action' */ },
+													mods : { theme : 'ergo', size : 'm' },
 													text : 'Корзина',
 													icon: {
 														block: 'icon',
@@ -124,7 +124,7 @@ module.exports = {
 															elem: 'tail'
 														},
 														{
-															elem: 'content',
+															elem: 'container',
 															/* content: 'Корзина пуска' */
 															content: [
 																{
@@ -145,7 +145,7 @@ module.exports = {
 																			mods: { 'incart': true },
 																			content: [
 																				{
-																					elem: 'content',
+																					elem: 'container',
 																					content: [
 																						{
 																							elem: 'image',
@@ -158,7 +158,7 @@ module.exports = {
 																							]
 																						},
 																						{
-																							elem: 'text',
+																							elem: 'content',
 																							content: [
 																								{
 																									elem: 'name',
@@ -191,7 +191,7 @@ module.exports = {
 																			mods: { 'incart': true },
 																			content: [
 																				{
-																					elem: 'content',
+																					elem: 'container',
 																					content: [
 																						{
 																							elem: 'image',
@@ -204,7 +204,7 @@ module.exports = {
 																							]
 																						},
 																						{
-																							elem: 'text',
+																							elem: 'content',
 																							content: [
 																								{
 																									elem: 'name',
@@ -295,7 +295,7 @@ module.exports = {
 											mods: { 'shadow': true, 'showcase': true },
 											content: [
 												{
-													elem: 'content',
+													elem: 'container',
 													content: [
 														{
 															elem: 'image',
@@ -308,7 +308,7 @@ module.exports = {
 															]
 														},
 														{
-															elem: 'text',
+															elem: 'content',
 															content: [
 																{
 																	elem: 'name',
@@ -347,7 +347,7 @@ module.exports = {
 											mods: { 'shadow': true, 'showcase': true },
 											content: [
 												{
-													elem: 'content',
+													elem: 'container',
 													content: [
 														{
 															elem: 'image',
@@ -360,7 +360,7 @@ module.exports = {
 															]
 														},
 														{
-															elem: 'text',
+															elem: 'content',
 															content: [
 																{
 																	elem: 'name',
@@ -398,7 +398,7 @@ module.exports = {
 											mods: { 'shadow': true },
 											content: [
 												{
-													elem: 'content',
+													elem: 'container',
 													content: [
 														{
 															elem: 'image',
@@ -411,7 +411,7 @@ module.exports = {
 															]
 														},
 														{
-															elem: 'text',
+															elem: 'content',
 															content: [
 																{
 																	elem: 'name',
@@ -443,7 +443,7 @@ module.exports = {
 											mods: { 'shadow': true },
 											content: [
 												{
-													elem: 'content',
+													elem: 'container',
 													content: [
 														{
 															elem: 'image',
@@ -456,7 +456,7 @@ module.exports = {
 															]
 														},
 														{
-															elem: 'text',
+															elem: 'content',
 															content: [
 																{
 																	elem: 'name',
@@ -488,7 +488,7 @@ module.exports = {
 											mods: { 'shadow': true },
 											content: [
 												{
-													elem: 'content',
+													elem: 'container',
 													content: [
 														{
 															elem: 'image',
@@ -501,7 +501,7 @@ module.exports = {
 															]
 														},
 														{
-															elem: 'text',
+															elem: 'content',
 															content: [
 																{
 																	elem: 'name',
@@ -533,7 +533,7 @@ module.exports = {
 											mods: { 'shadow': true },
 											content: [
 												{
-													elem: 'content',
+													elem: 'container',
 													content: [
 														{
 															elem: 'image',
@@ -546,7 +546,7 @@ module.exports = {
 															]
 														},
 														{
-															elem: 'text',
+															elem: 'content',
 															content: [
 																{
 																	elem: 'name',
@@ -578,7 +578,7 @@ module.exports = {
 											mods: { 'shadow': true },
 											content: [
 												{
-													elem: 'content',
+													elem: 'container',
 													content: [
 														{
 															elem: 'image',
@@ -591,7 +591,7 @@ module.exports = {
 															]
 														},
 														{
-															elem: 'text',
+															elem: 'content',
 															content: [
 																{
 																	elem: 'name',
@@ -628,79 +628,74 @@ module.exports = {
 						}
 					]
 				},				
-				{
+				/* {
 					block: 'goods-card',
 					content: [
 						{
-							elem: 'wrapper',
+							elem: 'container',
 							content: [
+								{
+									elem: 'title',
+									content: 'Organic Dark Cocoa'
+								},
+								{
+									elem: 'swiper',
+									content: [
+										{
+											block: 'swiper',
+											cls: 'goods-card-swiper',
+											content: [
+												{
+													elem: 'slide',
+													bg: 'https://yandex.ru/images/today?size=600x600',
+												},
+												{
+													elem: 'slide',
+													bg: 'https://yandex.ru/images/today?size=600x600',
+												},
+												{
+													elem: 'slide',
+													bg: 'https://yandex.ru/images/today?size=600x600',
+												},	
+												{
+													elem: 'button',
+													elemMods: { 'prev': true, 'theme': 'ergo' }
+												},	
+												{
+													elem: 'button',
+													elemMods: { 'next': true, 'theme': 'ergo' }
+												},	
+												{
+													elem: 'pagination'
+												}
+											]
+										}	
+									]
+								},
 								{
 									elem: 'content',
 									content: [
 										{
-											elem: 'title',
-											content: 'Organic Dark Cocoa'
+											elem: 'price',
+											content: '10 000'
 										},
 										{
-											elem: 'swiper',
+											elem: 'list',
 											content: [
 												{
-													block: 'swiper',
-													cls: 'goods-card-swiper',
+													block: 'list',
 													content: [
 														{
-															elem: 'slide',
-															bg: 'https://yandex.ru/images/today?size=600x600',
+															elem: 'item',
+															content: 'Назначение — городской'
 														},
 														{
-															elem: 'slide',
-															bg: 'https://yandex.ru/images/today?size=600x600',
+															elem: 'item',
+															content: 'Тип — унисекс'
 														},
 														{
-															elem: 'slide',
-															bg: 'https://yandex.ru/images/today?size=600x600',
-														},	
-														{
-															elem: 'button',
-															elemMods: { 'prev': true, 'theme': 'ergo' }
-														},	
-														{
-															elem: 'button',
-															elemMods: { 'next': true, 'theme': 'ergo' }
-														},	
-														{
-															elem: 'pagination'
-														}
-													]
-												}	
-											]
-										},
-										{
-											elem: 'text',
-											content: [
-												{
-													elem: 'price',
-													content: '10 000'
-												},
-												{
-													elem: 'list',
-													content: [
-														{
-															block: 'list',
-															content: [
-																{
-																	elem: 'item',
-																	content: 'Назначение — городской'
-																},
-																{
-																	elem: 'item',
-																	content: 'Тип — унисекс'
-																},
-																{
-																	elem: 'item',
-																	content: 'Тип конструкции — мягкий'
-																}
-															]
+															elem: 'item',
+															content: 'Тип конструкции — мягкий'
 														}
 													]
 												}
@@ -711,7 +706,7 @@ module.exports = {
 							]
 						}
 					]
-				}
+				} */
 			]
 		}
     ]

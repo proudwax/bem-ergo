@@ -10,7 +10,7 @@ block('goods')(
 	}),
 	match(function(){ return this.mods.showcase })(
 		js()(true),
-		elem('text').content()(function() {
+		elem('content').content()(function() {
 			return [
 				applyNext(),
 				{
@@ -42,7 +42,7 @@ block('goods')(
 	),
 	match(function(){ return this.mods.incart })(
 		js()(true),
-		elem('text').content()(function() {
+		elem('content').content()(function() {
 			return [
 				applyNext(),
 				{

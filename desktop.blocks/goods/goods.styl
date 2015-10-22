@@ -13,7 +13,7 @@
 .goods_shadow{
 	box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
 }
-.goods__content{
+.goods__container{
 	position: absolute;
 	top: 1rem;
 	left: 1rem;
@@ -30,7 +30,7 @@
 	max-height: 100%;
 	display: inline-block;
 }
-.goods__text{
+.goods__content{
 	width: 100%;
 	position: absolute;
 	bottom: 0;
@@ -44,6 +44,12 @@
 	margin-bottom: .5rem;
 	text-align: left;
 	font-weight: 500;
+}
+.goods__name .link{
+	color: #333;
+}
+.goods__name .link_hovered{
+	color: #f37d2f;
 }
 .goods__name_size_l, .goods__price_size_l{
 	font-size: 15px;
@@ -87,7 +93,7 @@ ctx = '.goods_incart'
 		outline: 1px solid rgba(194, 100, 37, .5);
 		background: rgba(243, 125, 47, .1);
 	}
-	.goods__content{
+	.goods__container{
 		position: relative;
 		top: 0;
 		right: 0;
@@ -100,7 +106,7 @@ ctx = '.goods_incart'
 		display: inline-block;
 		float: left;
 	}
-	.goods__text{
+	.goods__content{
 		background: inherit;
 		position: relative;
 		display: inline-block;
