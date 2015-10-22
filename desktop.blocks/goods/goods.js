@@ -44,7 +44,7 @@ provide(BEMDOM.decl(this.name, {
 		
 		$.get(url)
             .then(function(data){
-				BEMDOM.scope.append(BEMHTML.apply({ block: 'goods-card', content: data }))
+				BEMDOM.scope.append(BEMHTML.apply({ block: 'goods-card', mods: { 'visible': true } , content: data }))
             });
 	},	
 	

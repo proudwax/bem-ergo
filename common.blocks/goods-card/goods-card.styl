@@ -63,20 +63,22 @@
 	display: inline-block;
 	vertical-align: top;
 }
+.goods-card_visible{
+	right: 0;
+}
 @media screen and (orientation: portrait) { 
 	.goods-card{
 		width: 100%;
 		right: -100%;
 		border-left-width: 0;
 	}
+	.goods-card_visible{
+		right: 0;
+	}	
 }
 
 ctx = '.page__container_goods-card_visible'
 {ctx} {
-	.goods-card{
-		right: 0;
-	}
-
 	@media only screen and (min-width: 48em) {
 		.col-sm-6  {
 			-ms-flex-preferred-size: 100%;

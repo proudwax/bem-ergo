@@ -21,6 +21,8 @@ provide(BEMDOM.decl(this.name, {
 					loop: true
 				});
 				
+				console.log(swiper_card);
+				
 				this.elem('close').on('click', function(e){
                     channels('goods-card__close').emit('click', false);
                 });
