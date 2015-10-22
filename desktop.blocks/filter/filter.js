@@ -5,6 +5,7 @@ provide(BEMDOM.decl(this.name, {
 		'js': {
             'inited': function() {
 				var filter_value, goods; // это бессмысленно, переменные ограничены областью видимости функции, см. замыкания в JS
+				
 				var _this = this,
 					select = this.findBlockInside('select'),
 					radio_group = this.findBlockInside('radio-group');
@@ -14,9 +15,13 @@ provide(BEMDOM.decl(this.name, {
 				this.bindToWin('resize', throttle(this._redraw, 500));
 
 				channels('goods-card__close').on('click', function(){
+					setTimeout(function(){_this._redraw()}, 300);
+					
 					_this._redraw();
 				});
 				channels('goods-card__visible').on('click', function(){
+					setTimeout(function(){_this._redraw()}, 300);
+					
 					_this._redraw();
 				});
 				

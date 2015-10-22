@@ -66,7 +66,7 @@ module.exports = {
 								{
 									elem: 'item',
 									mix: [{ block: 'filter', js: true }],
-									cls: 'col-xs-6 col-sm-9 col-md-9 col-lg-9',
+									cls: 'col-xs-6 col-sm-8 col-md-9 col-lg-9',
 									content: [
 										{
 											block: 'radio-group',
@@ -84,7 +84,7 @@ module.exports = {
 										{
 											block : 'select',
 											mix: [{ block: 'filter', elem: 'group' }],
-											mods : { mode : 'radio', theme : 'islands', size : 'm' },
+											mods : { mode : 'radio', theme : 'ergo', size : 'm' },
 											name: 'radio',
 											val : '',
 											options : [
@@ -98,7 +98,7 @@ module.exports = {
 								},
 								{
 									elem: 'item',
-									cls: 'col-xs-6 col-sm-3 col-md-3 col-lg-3',
+									cls: 'col-xs-6 col-sm-4 col-md-3 col-lg-3',
 									content: [
 										{
 											block: 'cart',

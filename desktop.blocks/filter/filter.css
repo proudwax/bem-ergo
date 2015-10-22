@@ -4,10 +4,15 @@
 .filter__group{
 	display: none !important;
 	position: relative;
+}
+.filter__group.radio-group{
 	left: 50%;
 	-webkit-transform: translateX(-50%);
 	-ms-transform: translateX(-50%);
 	transform: translateX(-50%);
+}
+.filter__group.select{
+	padding-left: 1rem;
 }
 .filter__group.radio-group_visible{
 	display: inline-block !important;

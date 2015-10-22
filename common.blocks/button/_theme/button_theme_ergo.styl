@@ -1,6 +1,6 @@
 ctx = '.button_theme_ergo'
 {ctx} {
-    font-family:inherit;
+    font-family: Arial, Helvetica, sans-serif;
 
     position: relative;
 
@@ -11,7 +11,7 @@ ctx = '.button_theme_ergo'
 
     user-select: none;
 
-    color: #333;
+    color: #000;
     border: 0;
     border-radius: 3px;
     outline: 0;
@@ -39,15 +39,6 @@ ctx = '.button_theme_ergo'
         text-overflow: ellipsis;
         vertical-align: top;
     }
-	
-	.button__badge{
-		background: #f37d2f none repeat scroll 0 0;
-		border-radius: 50%;
-		display: inline-block;
-		position: relative;
-		box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-		color: #fff;	
-	}
 
     .icon
     {
@@ -96,12 +87,11 @@ ctx = '.button_theme_ergo'
 
     &.button_checked
     {
-        background: rgba(194, 100, 37, 0.8);
-		color: #fff;
+        background: rgba(153, 122, 0, 0.5);
 
         &:before
         {
-            background: #f37d2f;
+            background: #ffeba0;
         }
 
         &.button_pressed
@@ -116,7 +106,7 @@ ctx = '.button_theme_ergo'
 
         &.button_hovered
         {
-            background: rgba(170, 87, 32, 0.8);
+            background: rgba(129, 103, 0, 0.6);
         }
     }
 
@@ -152,12 +142,11 @@ ctx = '.button_theme_ergo'
 
     &.button_view_action
     {
-        background: rgba(194, 100, 37, 0.8);
-		color: #fff;
+        background: rgba(191, 153, 0, 0.8);
 
         &:before
         {
-            background: #f37d2f;
+            background: #ffdb4d;
         }
 
         &.button_pressed:before
@@ -167,7 +156,7 @@ ctx = '.button_theme_ergo'
 
         &.button_hovered
         {
-            background: rgba(170, 87, 32, 0.8);
+            background: rgba(159, 127, 0, 0.8);
         }
     }
 
@@ -276,15 +265,6 @@ ctx = '.button_theme_ergo'
         {
             margin: 0 13px;
         }
-		
-		.button__badge{
-			font-size: 11px;
-			height: 18px;
-			line-height: 18px;
-			right: -7px;
-			top: -14px;
-			width: 18px;		
-		}
     }
 
     &.button_size_l
