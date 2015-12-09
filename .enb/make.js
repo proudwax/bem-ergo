@@ -13,7 +13,7 @@ var techs = {
         browserJs: require('enb-js/techs/browser-js'),
 
         // bemtree
-        // bemtree: require('enb-bemxjst/techs/bemtree'),
+        bemtree: require('enb-bemxjst/techs/bemtree'),
 
         // bemhtml
         bemhtml: require('enb-bemxjst/techs/bemhtml'),
@@ -27,6 +27,8 @@ var techs = {
         { path: 'libs/bem-components/desktop.blocks', check: false },
         { path: 'libs/bem-components/design/common.blocks', check: false },
         { path: 'libs/bem-components/design/desktop.blocks', check: false },
+        { path: 'libs/bem-history/common.blocks', check: false },
+        { path: 'libs/bem-history/touch.blocks', check: false },
         'common.blocks',
         'desktop.blocks'
     ];
@@ -46,17 +48,16 @@ module.exports = function(config) {
             // css
             [techs.stylus, {
                 target: '?.css',
-                sourcemap: !isProd,
                 autoprefixer: {
                     browsers: ['ie >= 10', 'last 2 versions', 'opera 12.1', '> 2%']
                 }
             }],
 
             // bemtree
-            // [techs.bemtree],
+            [techs.bemtree, { devMode: process.env.BEMTREE_ENV === 'development' }],
 
             // bemhtml
-            [techs.bemhtml],
+            [techs.bemhtml, { devMode: process.env.BEMHTML_ENV === 'development' }],
 
             // html
             [techs.bemjsonToHtml],
@@ -78,7 +79,8 @@ module.exports = function(config) {
             }],
             [techs.bemhtml, {
                 target: '?.browser.bemhtml.js',
-                filesTarget: '?.bemhtml.files'
+                filesTarget: '?.bemhtml.files',
+                devMode: process.env.BEMHTML_ENV === 'development'
             }],
 
             // js
