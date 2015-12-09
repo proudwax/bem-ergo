@@ -1,0 +1,41 @@
+.header{
+	overflow: hidden;
+	font-size: 15px;
+	line-height: 18px;
+}
+.header__container_indent{
+	margin: 1.2rem 0;
+}
+.header__container_indent_top{
+	margin-top: 1.2rem;
+}
+.header__container_indent_bottom{
+	margin-bottom: 1.2rem;
+}
+.header__logo > .logo{
+	margin-left: 1.5rem;	
+}
+.header__nav-item{
+	display: inline-block;
+	vertical-align: top;
+	margin-right: .5rem;
+	text-align: left;
+}
+.header__nav_right{
+	text-align: right;
+}
+.header__nav-item:last-child{
+	margin-right: 0;	
+}
+.header__nav_right > .header__nav-item:last-child{
+	margin-right: 1.5rem;	
+}
+@media only screen and (max-width: 64em) {
+	.header__logo, .header__middle, .header__nav{
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+	}
+	.header__nav_right{
+		text-align: inherit;
+	}
+}

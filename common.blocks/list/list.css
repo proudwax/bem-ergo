@@ -1,0 +1,18 @@
+.list{
+	padding: 0;
+	margin-top: 0;
+	list-style: none;
+}
+.list__item{
+	position: relative;
+}
+.list__item::before {
+    background: #b2b2b2 none repeat scroll 0 0;
+    border-radius: 50%;
+    content: "";
+    height: 4px;
+    left: -12px;
+    position: absolute;
+    top: 7px;
+    width: 4px;
+}

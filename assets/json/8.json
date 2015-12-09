@@ -1,0 +1,71 @@
+[
+	{
+		"elem": "title",
+		"content": "Original Teal"
+	},
+	{
+		"elem": "swiper",
+		"content": [
+			{
+				"block": "swiper",
+				"cls": "goods-card-swiper",
+				"content": [
+					{
+						"elem": "slide",
+						"bg": "/assets/i/promo8.jpg"
+					},
+					{
+						"elem": "slide",
+						"bg": "/assets/i/promo8-1.jpg"
+					},
+					{
+						"elem": "slide",
+						"bg": "/assets/i/promo8-2.jpg"
+					},	
+					{
+						"elem": "button",
+						"elemMods": { "prev": true, "theme": "ergo" }
+					},	
+					{
+						"elem": "button",
+						"elemMods": { "next": true, "theme": "ergo" }
+					},	
+					{
+						"elem": "pagination"
+					}
+				]
+			}	
+		]
+	},
+	{
+		"elem": "content",
+		"content": [
+			{
+				"elem": "price",
+				"content": "10 000"
+			},
+			{
+				"elem": "list",
+				"content": [
+					{
+						"block": "list",
+						"content": [
+							{
+								"elem": "item",
+								"content": "Назначение — городской"
+							},
+							{
+								"elem": "item",
+								"content": "Тип — унисекс"
+							},
+							{
+								"elem": "item",
+								"content": "Тип конструкции — мягкий"
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

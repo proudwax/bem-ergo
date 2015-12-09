@@ -1,0 +1,118 @@
+.goods-card{
+	width: 50%;
+	position: fixed;
+	top: 0;
+	right: -50%;
+	overflow-y: auto; 
+	overflow-x: hidden; 
+	height: 100%;
+	z-index: 20;
+	transition: right .3s ease .1s;
+	border-left: 2px solid #dfdfdf;
+	background-color: #fff;
+	box-sizing: border-box;
+}
+.goods-card_spin_visible .goods-card__container{
+	transition: opacity .3s ease .1s;
+	opacity: 0.1;
+}
+.goods-card__close{
+	position: absolute;
+	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADcAAAAjBAMAAADCso/4AAAAGFBMVEUAAADQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NCwP/4LAAAAB3RSTlMA2hMVFngykdziUgAAADdJREFUKM9jIBEEGuCRFBfGI+lYiEcry6hWemgtxw3wS+IETOJCuCUVCxVGNdJVIwM+jQyJcI0A0GYn62SdpWoAAAAASUVORK5CYII=');
+	background-repeat: no-repeat;
+	width: 55px;
+	height: 35px;
+	right: 25px;
+	top: 25px;
+	cursor: pointer;
+}
+.goods-card__wrapper{
+	max-width: 600px;
+	min-height: 500px;
+	margin: 0 auto;
+}
+.goods-card__title{
+    font-size: 35px;
+    line-height: 1.3em;
+	font-weight: 300;
+}
+.goods-card__container{
+    box-sizing: border-box;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+.goods-card__content{
+	position: relative;
+	margin: .5rem 0;
+}
+.goods-card__price{
+    font-size: 30px;
+    line-height: 32px;
+	font-weight: 300;
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;	
+}
+.goods-card__price .fa-rub {
+    font-size: 18px;
+    padding-left: 3px;
+	font-weight: 300;	
+}
+.goods-card__action{
+	margin-top: 10px;
+}
+.goods-card__list{
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+}
+.goods-card_visible{
+	right: 0;
+}
+@media screen and (orientation: portrait) { 
+	.goods-card{
+		width: 100%;
+		right: -100%;
+		border-left-width: 0;
+	}
+	.goods-card_visible{
+		right: 0;
+	}	
+}
+
+ctx = '.page__container_goods-card_visible'
+{ctx} {
+	@media only screen and (min-width: 48em) {
+		.col-sm-6  {
+			-ms-flex-preferred-size: 100%;
+			-webkit-flex-basis: 100%;
+			flex-basis: 100%;
+			max-width: 100%;
+		}	
+	}
+	@media only screen and (min-width: 62em) {
+		.col-md-4  {
+			-ms-flex-preferred-size: 100%;
+			-webkit-flex-basis: 100%;
+			flex-basis: 100%;
+			max-width: 100%;
+		}
+	}
+	@media only screen and (min-width: 75em) {
+		.col-lg-3 {
+			-ms-flex-preferred-size: 50%;
+			-webkit-flex-basis: 50%;
+			flex-basis: 50%;
+			max-width: 50%;
+		}
+		.col-lg-9{
+			-ms-flex-preferred-size: 50%;
+			-webkit-flex-basis: 50%;
+			flex-basis: 50%;
+			max-width: 50%;		
+		}
+	}
+	
+}

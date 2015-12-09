@@ -1,0 +1,110 @@
+block('goods-cart')(
+	/* def()(function(){
+		return applyNext({ _goods: this.ctx })
+	}), */
+	content()('sdfsdf')/* ,
+	elem('image')(
+		mix()('col-xs-1'),
+		content()(function(){
+			return {
+				block: 'image',
+				url: this.js.image,
+				alt: this.js['image-alt']
+			}
+		})
+	) */
+
+	/* elem('item')(
+		def()(function(){
+			return applyNext({ _item: this.ctx })
+		}),
+		js()(function(){
+			return {
+				name: this.ctx.name,
+				price: this.ctx.price
+			}
+		}),
+		mix()('row container-fluid middle-xs'),
+		content()(function(){
+			return [
+				{
+					elem: 'image',
+				},
+				{
+					elem: 'content',
+				},
+				{
+					elem: 'amount',
+					content: [
+						{
+							block : 'amount',
+							js: true,
+							buttonMinusMods: { theme : 'ergo', size : 'm', 'minus': true },
+							buttonPlusMods: { theme : 'ergo', size : 'm', 'plus': true },
+							InputMods : { theme : 'ergo', size : 'm', 'count': true },
+							InputMaxLength : 2,
+							InputVal: 1,
+							InputName: 'count'
+						}
+					]
+				},
+				{
+					elem: 'price',
+					mods: { 'rub': true }
+				},
+				{
+					elem: 'toolbar',
+					mods: { 'trash': true }
+				}
+			]
+		})
+	),
+	
+	elem('content')(
+		mix()('col-xs-5'),
+		content()(function(){
+			return {
+				elem: 'name',
+				content: this._item.name
+			}
+		})		
+	),
+	elem('amount')(
+		mix()('col-xs-3')
+	),
+	elem('price')(
+		mix()('col-xs-2'),
+		match(function(){ return this.ctx.mods && this.ctx.mods.rub == true })(
+			content()(function(){
+				return [
+					this._item.price,
+					{
+						block: 'icon',
+						cls: 'fa fa-rub'
+					}
+				]
+			})
+		)
+	),
+	elem('toolbar')(
+		mix()('col-xs-1 center-xs'),
+		match(function(){ return this.ctx.mods && this.ctx.mods.trash == true })(
+			content()(function(){
+				return [
+					applyNext(),
+					{
+						block: 'button',
+						mods: { view : 'action', theme: 'ergo', size: 'm', view : 'plain', 'trash': true },
+						icon: {
+							block: 'icon'
+						}
+					}
+				]
+			})
+		)
+	) */
+)
+
+// {"cart-card":{"id":"QWCVJrvJbT_tKkyS33-zEQ"},"offer":{"options":{"id":"QWCVJrvJbT_tKkyS33-zEQ","name":"Apple iPhone 6 16Gb (графитовый)","type":"OFFER","shopId":78300,"modelId":11031621,"vendorId":153043,"hid":91491,"cpa":"real","urlCpa":"/redir/338FT8NBgRvkALCx4oyM5bL7NOIVbwqyDT8HXgF5guccqB3hhac23XDz4r7lWqBL1PyLlH5JrIYDlnhvTmj_g-6DyDFL51ikAFMU-vLWCw00s3huLUWmfMWckqUqH6OgfSZdL4fPQsKx89q3dm7IkPy24bwW2WS0OugD51UUh2s5-xJOrnYHGv1Lz4wZMpvapTJ11Km0OcfUk0wdOLXP_Unc4m6Wbki6in80igKE0q5PEpP4pWe491rqNbdn6hFhUPppG0oSpdy4xVzUs98WVK8zycildjXklDDXjeH8ZVR30tJtW7WO9xdHZhmpqcPmVzF1SJp03fj5cWzxO3MAyRE-REyXhdOqNMCQ7HZv1PefDC1lXe21HZrRYHyAat6Cx_EUfsHreZPYIk2HLB31ltExANjgEYXSXzXf2CIdeXNwksFKSCql_KB0VxsrPuUzx-bd7rIZvNFhqcWf3qL_kKCW9XvadmBMxV1I-BevtmQ3-42EIyINXanN571YvSH0FFNhLlVlh9L6QazkEMvuwDxTPPx5d259ETWjz5MsT3N8yRE4oAf1lXYHWi2wfsinpC5_zgHGlM31SXuF9FCa-22PwUrvTQ3olomQjsh2yBNm8RICC1SEgKBiIHCTFPyt3iv4cM7rZIfTFydp7kmerkXcIC4PKmTjf0qaN7s3IAHncloAx7RjDQ?data=QVyKqSPyGQwwaFPWqjjgNoIbEZ4wabbKsjzK9p4NTkdAzg4b-9gO6zLzgNI0mfrYmeu2r7k5D7xo8x6oq_xIDHsdAAxJf4SPtxoPZqUC7koD4kFD2wg_YILrcY8TPT9o9L-_CCqZcpG0oUA51x5vfxRP1NvzZwpWN7x-tQUiDeTThR5UH6re0TRfHR47e7aLyEKx_K8f3Dt4jON7AS2Zvpexm5q5sqVFVJh5S5jvt62tWfcQQFwBqjq2ShqzejDaKDYMq3ZtmYc2JysHTWumKBPrDJabzbos_FhvgGhiscSYBZiSTB9JJqb8Naca4o_rOdGnXdQy0hsz2eM3V_fKYBRL3Qu6GnmIwGsjI_o8v2UVzTCj6UnObkyyTEwEbR8igINcv2UXazdGsAv8ZvbpvQ&b64e=1&sign=5db3306c510a6d1774ee65cb2e882ae2&keyno=1","cpc":"n29OKOX1n_YFWKyAYu_Xk4GZoJspkkQ5gPkpJUqAKeTBnSjO3e1WRw","onStock":true,"fee":"xM_FOMXZ_CRIUmOud5yiYSiOmwzeQ06ArdT3sLn1WZnJ0uR_0U3reM0xTFUNAoKFBICmoUTZcC1ubD_koD1M1w","price":40980,"count":1,"feedId":315354,"currency":"RUR","description":"Apple iPhone 6 16Gb (графитовый)","offerId":"27277","manufacturerWarranty":"","sellerWarranty":"","images":[],"delivery":{"_maxListeners":10,"_eventData":null,"regionID":2,"shipping":true,"shippingShort":"Ближайшие пригороды, расположенные до КАД - 500р.<br>За пределы КАД от 500р.","shippingLong":"Ближайшие пригороды, расположенные до КАД - 500р.<br>За пределы КАД от 500р.","pickup":true,"store":true,"free":false,"downloadable":false,"price":290,"priority":true,"priorityRegionID":2,"priorityRegionName":"Санкт-Петербург"},"shopName":"Apple-Zone","qualityRating":5}}}
+
+

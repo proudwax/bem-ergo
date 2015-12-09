@@ -1,0 +1,38 @@
+block('goods-card')(
+	js()(true),
+	content()(function(){
+		return [
+			{
+				elem: 'close'
+			},
+			{
+				elem: 'wrapper',
+				content: applyNext()
+			}
+		]
+	}),
+	elem('title').tag()('h1'),
+	elem('price').content()(function(){
+		return [
+			applyNext(),
+			{
+				block: 'icon',
+				cls: 'fa fa-rub'
+			},
+			{
+				elem: 'action',
+				content:[
+					{
+						block: 'button',
+						mods: { view : 'action', theme: 'ergo', size: 'l', add: true },
+						text: 'В корзину',
+						icon: {
+							block: 'icon',
+							cls: 'fa fa-shopping-cart'
+						}
+					}
+				]	
+			}
+		];
+	})
+)

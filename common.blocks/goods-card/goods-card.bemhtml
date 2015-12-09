@@ -1,0 +1,44 @@
+block('goods-card')(
+	js()(true),
+	content()(function(){
+		return [
+			{
+				elem: 'close',
+				/* mix: [{ block: 'history-use', js: true }], */
+			},
+			{
+				elem: 'wrapper',
+				content: [
+					{
+						elem: 'container',
+						content: applyNext()
+					}
+				]
+			}
+		]
+	}),
+	elem('title').tag()('h1'),
+	elem('price').content()(function(){
+		return [
+			applyNext(),
+			{
+				block: 'icon',
+				cls: 'fa fa-rub'
+			},
+			{
+				elem: 'action',
+				content:[
+					{
+						block: 'button',
+						mods: { view : 'action', theme: 'ergo', size: 'l', add: true },
+						text: 'В корзину',
+						icon: {
+							block: 'icon',
+							cls: 'fa fa-shopping-cart'
+						}
+					}
+				]	
+			}
+		];
+	})
+)
