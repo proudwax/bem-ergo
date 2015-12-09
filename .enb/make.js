@@ -13,7 +13,6 @@ var techs = {
         browserJs: require('enb-js/techs/browser-js'),
 
         // bemtree
-
         bemtree: require('enb-bemxjst/techs/bemtree'),
 
         // bemhtml
