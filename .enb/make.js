@@ -55,7 +55,7 @@ module.exports = function(config) {
             }],
 
             // bemtree
-            // [techs.bemtree, { sourceSuffixes: ['bemtree', 'bemtree.js'] }],
+            [techs.bemtree, { sourceSuffixes: ['bemtree', 'bemtree.js'] }],
 
             // bemhtml
             [techs.bemhtml, { sourceSuffixes: ['bemhtml', 'bemhtml.js'] }],
